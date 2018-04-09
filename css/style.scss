@@ -1434,7 +1434,8 @@ li{
           font-family: 'Mina', sans-serif;
           font-size: 2.0rem;
           font-weight: bold;
-          color: $Orange;  
+          color: $Orange;
+          cursor: pointer;
           &:hover{
               color: $Yellow;
           }//hover
