@@ -1739,9 +1739,9 @@ li{
  
  /* confirm.php -------------------------------------------------------confirm.phpここから-----*/
  .echo{
-     width: 960px;
+     width: 650px;
      margin: auto;
-     font-size: 1.8rem;
+     font-size: 1.6rem;
      line-height: 2.0;
      padding-top: 20px;
      height: 1000px;
@@ -1750,6 +1750,8 @@ li{
  @media(max-width: 550px){
      .echo{
         width: 95%;
+        font-size: 1.4rem;
+        background: #f2f2f2;
      }//echo
  }//maxwidth550
  

@@ -1,0 +1,1321 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Mina");
+/* Base --------------------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  letter-spacing: 0.2rem;
+  margin: 0;
+  padding: 0; }
+
+.uppercase {
+  text-transform: uppercase;
+  font-family: 'Mina', sans-serif; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+#bg video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100; }
+#bg img {
+  display: none; }
+@media (max-width: 550px) {
+  #bg {
+    max-width: 550px;
+    width: 100%; }
+    #bg video {
+      display: none; }
+    #bg img {
+      display: block;
+      position: fixed;
+      width: 100%;
+      height: auto;
+      z-index: -100; } }
+
+/*header ---------------------------------------------------------------------------------*/
+#head_in {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  z-index: 10;
+  width: 960px;
+  margin: auto;
+  padding: 10px; }
+  #head_in .head_logo {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 0;
+    padding-left: 10px; }
+    #head_in .head_logo h1 {
+      margin: 0; }
+  #head_in .navi {
+    padding-right: 0px; }
+    #head_in .navi .sp_navi {
+      display: none; }
+    #head_in .navi .pc_navi {
+      padding-top: 20px; }
+      #head_in .navi .pc_navi ul {
+        margin: 0; }
+        #head_in .navi .pc_navi ul li {
+          display: inline; }
+          #head_in .navi .pc_navi ul li a {
+            color: #555;
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding-left: 20px; }
+            #head_in .navi .pc_navi ul li a:hover {
+              color: #a2a2a2; }
+
+@media (max-width: 550px) {
+  #head_in {
+    max-width: 550px;
+    width: auto; }
+    #head_in .head_logo {
+      position: relative;
+      width: 50%;
+      padding: 0; }
+      #head_in .head_logo h1 {
+        position: absolute; }
+        #head_in .head_logo h1 img {
+          width: 130px; }
+    #head_in .navi .pc_navi {
+      display: none; }
+    #head_in .navi .sp_navi {
+      display: block; }
+      #head_in .navi .sp_navi #sp_navi_btn {
+        padding: 0; }
+        #head_in .navi .sp_navi #sp_navi_btn .hamburger-box {
+          top: 5px; }
+          #head_in .navi .sp_navi #sp_navi_btn .hamburger-box .hamburger-inner, #head_in .navi .sp_navi #sp_navi_btn .hamburger-box .hamburger-inner:after, #head_in .navi .sp_navi #sp_navi_btn .hamburger-box .hamburger-inner:before {
+            height: 2px;
+            background-color: #555; }
+        #head_in .navi .sp_navi #sp_navi_btn.is-active .hamburger-inner {
+          background-color: transparent; }
+      #head_in .navi .sp_navi .sp_navi_li {
+        width: 180px;
+        position: absolute;
+        top: 46px;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(251, 251, 251, 0.9);
+        text-align: center;
+        display: none;
+        z-index: 100; }
+        #head_in .navi .sp_navi .sp_navi_li li {
+          list-style: none;
+          margin: 0;
+          padding: 0; }
+          #head_in .navi .sp_navi .sp_navi_li li a {
+            display: block;
+            padding: 10px 8px;
+            border-bottom: 1px solid #555;
+            font-size: 14px;
+            color: #555;
+            text-decoration: none; } }
+/* main_img--------------------------------------------------------------------TOPページここから----------*/
+#main_img {
+  background: url(../images/top/top.png) center center;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  z-index: 30; }
+  #main_img .message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(../images/top/main_circle.png) no-repeat center center;
+    width: 600px;
+    height: 320px;
+    z-index: 40; }
+    #main_img .message .ms_text .ms_title {
+      font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+      font-size: 2.0rem;
+      color: white;
+      font-weight: bold;
+      text-align: center; }
+    #main_img .message .ms_text p {
+      font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+      font-size: 1.6rem;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      line-height: 2.0; }
+
+@media (max-width: 550px) {
+  #main_img {
+    background: url(../images/top_sp/top.png) center center;
+    padding-left: 5%;
+    padding-right: 5%; }
+    #main_img .message {
+      background: rgba(67, 129, 204, 0.7);
+      -moz-border-radius: 100px 50px 60px 30px/70px 100px 50px 40px;
+      -webkit-border-radius: 100px;
+      border-radius: 100px 50px 60px 30px/70px 100px 50px 40px;
+      max-width: 500px;
+      max-height: 650px;
+      width: auto;
+      height: auto; }
+      #main_img .message .ms_text .ms_title {
+        font-size: 1.8rem;
+        padding-top: 5%; }
+      #main_img .message .ms_text p {
+        font-size: 1.4rem;
+        font-weight: normal;
+        text-align: left;
+        line-height: 1.6;
+        padding: 0% 5% 5% 5%; } }
+/* plofile ------------------------------------------------------------------------------------*/
+#plofile {
+  padding: 0;
+  position: relative;
+  height: 400px; }
+  #plofile .plofile_bg {
+    background: #f19f4d;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+    height: 250px;
+    margin-top: 130px;
+    bottom: 0;
+    margin-left: 35%; }
+    @media (max-width: 1440px) {
+      #plofile .plofile_bg {
+        margin-left: 25%; } }
+    @media (max-width: 1200px) {
+      #plofile .plofile_bg {
+        margin-left: 20%; } }
+  #plofile .plofile_container {
+    width: 800px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto; }
+    #plofile .plofile_container h1 {
+      position: absolute;
+      margin: 0;
+      font-size: 45px;
+      color: #555;
+      width: 800px;
+      text-align: center;
+      left: 5px; }
+    #plofile .plofile_container .pc_plofile_img {
+      width: 300px; }
+    #plofile .plofile_container .plofile_text {
+      position: absolute;
+      font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+      font-size: 1.4rem;
+      padding: 20px 30px;
+      background: white;
+      width: 500px;
+      top: 50px;
+      right: 0; }
+      #plofile .plofile_container .plofile_text span {
+        font-size: 1.0rem; }
+
+@media (max-width: 550px) {
+  #plofile .plofile_bg {
+    margin-top: 80px;
+    margin-left: 15%; }
+  #plofile .plofile_container {
+    max-width: 550px;
+    width: 100%; }
+    #plofile .plofile_container h1 {
+      font-size: 40px;
+      max-width: 550px;
+      width: 100%;
+      left: 50px;
+      z-index: 30; }
+    #plofile .plofile_container .pc_plofile_img {
+      position: absolute;
+      left: -100px; }
+    #plofile .plofile_container .plofile_text {
+      box-sizing: border-box;
+      font-size: 1.2rem;
+      padding: 20px 20px;
+      width: 70%; } }
+/* service ----------------------------------------------------------------------------------*/
+#service {
+  padding: 0;
+  position: relative;
+  height: 550px; }
+  #service .service_bg {
+    background: #f9cf00;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+    height: 300px;
+    margin-top: 130px;
+    left: 0;
+    bottom: 0;
+    margin-right: 33%; }
+    @media (max-width: 1440px) {
+      #service .service_bg {
+        margin-right: 20%; } }
+    @media (max-width: 1200px) {
+      #service .service_bg {
+        margin-right: 20%; } }
+  #service .service_container {
+    width: 960px;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto; }
+    #service .service_container h1 {
+      position: absolute;
+      margin: 0;
+      font-size: 45px;
+      color: #555;
+      width: 960px;
+      text-align: center;
+      right: 90px;
+      z-index: 20; }
+    #service .service_container .service_img {
+      width: 460px;
+      float: right; }
+    #service .service_container .service_text {
+      position: absolute;
+      font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+      font-size: 1.4rem;
+      padding: 20px 30px 60px 30px;
+      background: white;
+      width: 540px;
+      top: 60px;
+      left: 0; }
+      #service .service_container .service_text .more {
+        font-size: 1.6rem;
+        width: 180px;
+        border: 1px solid #555;
+        text-align: center;
+        line-height: 2.0; }
+        #service .service_container .service_text .more:hover {
+          background: #f2f2f2; }
+        #service .service_container .service_text .more a {
+          text-decoration: none;
+          color: #555; }
+    #service .service_container .service_contents {
+      position: absolute;
+      top: 260px;
+      left: 55px;
+      display: -webkit-flex;
+      display: flex;
+      width: 850px;
+      justify-content: space-between; }
+      #service .service_container .service_contents .content {
+        position: relative; }
+        #service .service_container .service_contents .content img {
+          width: 200px; }
+        #service .service_container .service_contents .content p {
+          position: absolute;
+          font-size: 1.6rem;
+          color: #fff;
+          top: 60px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          text-align: center; }
+        #service .service_container .service_contents .content .line {
+          top: 70px; }
+
+@media (max-width: 550px) {
+  #service .service_bg {
+    height: 500px;
+    margin-top: 80px;
+    margin-right: 0; }
+  #service .service_container {
+    max-width: 550px;
+    width: 100%; }
+    #service .service_container h1 {
+      font-size: 40px;
+      width: 100%;
+      text-align: left;
+      left: 10px; }
+    #service .service_container .service_img {
+      width: 250px;
+      height: 400px;
+      object-fit: cover;
+      object-position: 100% 100%; }
+    #service .service_container .service_text {
+      box-sizing: border-box;
+      font-size: 1.2rem;
+      padding: 20px 20px 60px 20px;
+      width: 70%;
+      top: 50px; }
+      #service .service_container .service_text .more:hover {
+        background: none; }
+    #service .service_container .service_contents {
+      top: 320px;
+      left: 0;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap; }
+      #service .service_container .service_contents .content {
+        margin: 0 5px; }
+        #service .service_container .service_contents .content img {
+          width: 150px;
+          padding-top: 10px; }
+        #service .service_container .service_contents .content p {
+          top: 45px; }
+        #service .service_container .service_contents .content .line {
+          top: 60px; } }
+/* works -------------------------------------------------------------------------------*/
+#works {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px; }
+  #works h1 {
+    text-align: center;
+    color: #555;
+    font-size: 45px; }
+  #works .more {
+    font-size: 1.6rem;
+    width: 180px;
+    border: 1px solid #555;
+    text-align: center;
+    line-height: 2.0;
+    margin-left: auto; }
+    #works .more:hover {
+      background: white; }
+    #works .more a {
+      text-decoration: none;
+      color: #555; }
+
+@media (max-width: 550px) {
+  #works {
+    max-width: 550px;
+    width: auto;
+    margin-top: 120px; }
+    #works h1 {
+      margin-bottom: 10px;
+      font-size: 40px; }
+    #works .more {
+      background: white; } }
+/* footer --------------------------------------------------------------------------*/
+footer {
+  background: #7d7d7d;
+  color: #fff;
+  padding-top: 10px;
+  text-align: center; }
+  footer #footer_container {
+    margin: 0;
+    padding: 0; }
+    footer #footer_container .facebook {
+      margin-top: 10px;
+      margin-bottom: 0;
+      font-size: 3.0rem;
+      font-weight: bold;
+      color: #fff; }
+      footer #footer_container .facebook:hover {
+        color: #9b9b9b; }
+    footer #footer_container ul {
+      padding: 0;
+      margin-top: 20px; }
+      footer #footer_container ul li {
+        display: inline;
+        padding-right: 20px; }
+        footer #footer_container ul li:last-child {
+          padding-right: 0; }
+        footer #footer_container ul li a {
+          color: #fff;
+          font-size: 1.6rem; }
+          footer #footer_container ul li a:hover {
+            color: #9b9b9b; }
+    footer #footer_container .policy a {
+      color: white;
+      text-decoration: none; }
+      footer #footer_container .policy a:hover {
+        color: #9b9b9b; }
+    footer #footer_container .copy {
+      padding-top: 30px;
+      padding-bottom: 5px; }
+  @media (max-width: 550px) {
+    footer #footer_container img {
+      width: 130px; }
+    footer #footer_container .facebook:hover {
+      color: #fff; }
+    footer #footer_container ul li a:hover {
+      color: #fff; }
+    footer #footer_container ul {
+      width: 320px;
+      margin: auto; }
+      footer #footer_container ul li {
+        line-height: 1.8; }
+    footer #footer_container .policy a:hover {
+      color: white; }
+    footer #footer_container .copy {
+      font-size: 0.7rem; } }
+
+/* serviceページ
+----------------------------------------------------------------------------------serviceページここから-------*/
+/* main_img-----------------------------------------------------------------------------*/
+#sr_main_img {
+  background: url(../images/service/service.png) center center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  z-index: 30; }
+  #sr_main_img .main_title {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(67, 129, 204, 0.7);
+    -moz-border-radius: 250px 380px 300px 400px/320px 400px 250px 230px;
+    -webkit-border-radius: 250px;
+    border-radius: 250px 380px 300px 400px/320px 400px 250px 230px;
+    width: 500px;
+    height: 150px;
+    z-index: 40; }
+    #sr_main_img .main_title p {
+      font-size: 60px;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding-top: 40px; }
+
+@media (max-width: 550px) {
+  #sr_main_img {
+    background: url(../images/service_sp/service.png) center center; }
+    #sr_main_img .main_title {
+      width: 250px;
+      height: 100px;
+      z-index: 40; }
+      #sr_main_img .main_title p {
+        font-size: 45px;
+        padding-top: 25px; } }
+/* content -----------------------------------------------------------------------------*/
+#sr_container {
+  /* ここからbox1 --------------------------*/
+  /* ここからbox2 ------------------------------------*/ }
+  #sr_container .srbox1 {
+    padding: 0;
+    position: relative;
+    height: 400px;
+    margin-bottom: 150px; }
+    #sr_container .srbox1 .srbox1_bg {
+      background: #f19f4d;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+      opacity: 0.7;
+      height: 300px;
+      margin-top: 130px;
+      bottom: 0;
+      margin-left: 35%; }
+      @media (max-width: 1440px) {
+        #sr_container .srbox1 .srbox1_bg {
+          margin-left: 25%; } }
+      @media (max-width: 1200px) {
+        #sr_container .srbox1 .srbox1_bg {
+          margin-left: 20%; } }
+    #sr_container .srbox1 .srbox1_container {
+      width: 960px;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto; }
+      #sr_container .srbox1 .srbox1_container .srbox1_title {
+        position: absolute;
+        margin: 0;
+        font-family: 'Mina', sans-serif;
+        font-size: 45px;
+        color: #555;
+        width: 960px;
+        text-align: center;
+        right: 20px;
+        top: -10px; }
+      #sr_container .srbox1 .srbox1_container .chara {
+        left: 90px; }
+      #sr_container .srbox1 .srbox1_container .srbox1_img {
+        width: 380px; }
+      #sr_container .srbox1 .srbox1_container .srbox1_text {
+        box-sizing: border-box;
+        position: absolute;
+        padding: 20px 0 0 30px;
+        background: white;
+        width: 650px;
+        top: 50px;
+        right: 0;
+        font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+        font-size: 1.5rem;
+        line-height: 1.8; }
+        #sr_container .srbox1 .srbox1_container .srbox1_text h2 {
+          font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+          font-size: 2.0rem;
+          color: #555; }
+        #sr_container .srbox1 .srbox1_container .srbox1_text .sr_discr {
+          margin-bottom: 0;
+          margin-right: 30px; }
+        #sr_container .srbox1 .srbox1_container .srbox1_text p {
+          margin-bottom: 0; }
+        #sr_container .srbox1 .srbox1_container .srbox1_text ul {
+          margin: 0 0 0 20px;
+          padding: 0; }
+        #sr_container .srbox1 .srbox1_container .srbox1_text .srbox1_btn {
+          display: inline-flex;
+          float: right; }
+          #sr_container .srbox1 .srbox1_container .srbox1_text .srbox1_btn .btn {
+            font-size: 1.6rem;
+            width: 200px;
+            border: 1px solid #555;
+            text-align: center;
+            line-height: 2.0;
+            margin-left: auto; }
+            #sr_container .srbox1 .srbox1_container .srbox1_text .srbox1_btn .btn:hover {
+              background: #f2f2f2; }
+            #sr_container .srbox1 .srbox1_container .srbox1_text .srbox1_btn .btn a {
+              text-decoration: none;
+              color: #555; }
+  #sr_container .srbox2 {
+    padding: 0;
+    position: relative;
+    height: 480px;
+    margin-bottom: 150px; }
+    #sr_container .srbox2 .srbox2_bg {
+      background: #f9cf00;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+      opacity: 0.7;
+      height: 300px;
+      margin-top: 130px;
+      bottom: 0;
+      margin-right: 35%; }
+      @media (max-width: 1440px) {
+        #sr_container .srbox2 .srbox2_bg {
+          margin-right: 25%; } }
+      @media (max-width: 1200px) {
+        #sr_container .srbox2 .srbox2_bg {
+          margin-right: 20%; } }
+    #sr_container .srbox2 .srbox2_container {
+      width: 960px;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto; }
+      #sr_container .srbox2 .srbox2_container .srbox2_title {
+        position: absolute;
+        margin: 0;
+        font-family: 'Mina', sans-serif;
+        font-size: 45px;
+        color: #555;
+        width: 960px;
+        text-align: center;
+        right: 110px;
+        top: -10px; }
+      #sr_container .srbox2 .srbox2_container .mannga {
+        right: 0; }
+      #sr_container .srbox2 .srbox2_container .srbox2_img {
+        width: 380px;
+        float: right; }
+      #sr_container .srbox2 .srbox2_container .srbox2_text {
+        box-sizing: border-box;
+        position: absolute;
+        padding: 20px 30px 0 0;
+        background: white;
+        width: 650px;
+        top: 50px;
+        letter-spacing: 0;
+        font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+        font-size: 1.5rem;
+        line-height: 1.8; }
+        #sr_container .srbox2 .srbox2_container .srbox2_text h2 {
+          font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+          font-size: 2.0rem;
+          color: #555;
+          margin-left: 30px; }
+        #sr_container .srbox2 .srbox2_container .srbox2_text .sr_discr {
+          margin-bottom: 0;
+          margin-left: 30px; }
+        #sr_container .srbox2 .srbox2_container .srbox2_text p {
+          margin-bottom: 0;
+          margin-left: 30px; }
+        #sr_container .srbox2 .srbox2_container .srbox2_text ul {
+          margin: 0 0 0 50px;
+          padding: 0; }
+        #sr_container .srbox2 .srbox2_container .srbox2_text .srbox2_btn {
+          display: inline-flex;
+          float: left; }
+          #sr_container .srbox2 .srbox2_container .srbox2_text .srbox2_btn .btn {
+            font-size: 1.6rem;
+            width: 200px;
+            border: 1px solid #555;
+            text-align: center;
+            line-height: 2.0;
+            margin-left: auto; }
+            #sr_container .srbox2 .srbox2_container .srbox2_text .srbox2_btn .btn:hover {
+              background: #f2f2f2; }
+            #sr_container .srbox2 .srbox2_container .srbox2_text .srbox2_btn .btn a {
+              text-decoration: none;
+              color: #555; }
+
+@media (max-width: 550px) {
+  #sr_container {
+    max-width: 550px;
+    width: 100%;
+    /* ここからbox1 ----------------------------------------*/
+    /* ここからbox2 ------------------------------------------*/ }
+    #sr_container .srbox1 {
+      height: 600px;
+      margin-bottom: 100px; }
+      #sr_container .srbox1 .srbox1_bg {
+        margin-top: 100px;
+        margin-left: 5%; }
+      #sr_container .srbox1 .srbox1_container {
+        max-width: 550px;
+        width: 100%; }
+        #sr_container .srbox1 .srbox1_container .srbox1_title {
+          font-size: 30px;
+          width: 100%;
+          right: 0;
+          top: -40px; }
+        #sr_container .srbox1 .srbox1_container .chara {
+          left: 0; }
+        #sr_container .srbox1 .srbox1_container .srbox1_img {
+          width: 200px; }
+        #sr_container .srbox1 .srbox1_container .srbox1_text {
+          padding: 10px 0 0 0;
+          width: 85%;
+          font-size: 1.3rem;
+          line-height: 1.8; }
+          #sr_container .srbox1 .srbox1_container .srbox1_text h2 {
+            font-size: 1.6rem;
+            margin-left: 15px; }
+          #sr_container .srbox1 .srbox1_container .srbox1_text .sr_discr {
+            margin-right: 15px;
+            margin-left: 15px; }
+          #sr_container .srbox1 .srbox1_container .srbox1_text p {
+            margin-left: 15px; }
+          #sr_container .srbox1 .srbox1_container .srbox1_text ul {
+            margin-left: 15px;
+            margin-right: 15px; }
+          #sr_container .srbox1 .srbox1_container .srbox1_text .srbox1_btn {
+            width: 100%; }
+            #sr_container .srbox1 .srbox1_container .srbox1_text .srbox1_btn .btn {
+              flex: 1; }
+              #sr_container .srbox1 .srbox1_container .srbox1_text .srbox1_btn .btn:hover {
+                background: white; }
+    #sr_container .srbox2 {
+      height: 600px;
+      margin-bottom: 100px; }
+      #sr_container .srbox2 .srbox2_bg {
+        margin-top: 50px;
+        margin-right: 5%; }
+      #sr_container .srbox2 .srbox2_container {
+        max-width: 550px;
+        width: 100%; }
+        #sr_container .srbox2 .srbox2_container .srbox2_title {
+          font-size: 30px;
+          width: 100%;
+          right: 0;
+          top: -40px; }
+        #sr_container .srbox2 .srbox2_container .srbox2_img {
+          width: 200px; }
+        #sr_container .srbox2 .srbox2_container .srbox2_text {
+          padding: 10px 0 0 0;
+          width: 85%;
+          font-size: 1.3rem;
+          line-height: 1.8; }
+          #sr_container .srbox2 .srbox2_container .srbox2_text h2 {
+            font-size: 1.6rem;
+            margin-left: 15px; }
+          #sr_container .srbox2 .srbox2_container .srbox2_text .sr_discr {
+            margin-left: 15px;
+            margin-right: 15px; }
+          #sr_container .srbox2 .srbox2_container .srbox2_text p {
+            margin-left: 15px; }
+          #sr_container .srbox2 .srbox2_container .srbox2_text ul {
+            margin: 0 15px 0 25px; }
+          #sr_container .srbox2 .srbox2_container .srbox2_text .srbox2_btn {
+            width: 100%; }
+            #sr_container .srbox2 .srbox2_container .srbox2_text .srbox2_btn .btn {
+              flex: 1; }
+              #sr_container .srbox2 .srbox2_container .srbox2_text .srbox2_btn .btn:hover {
+                background: white; } }
+/* pagetop ----------------------------------------------------------------------------*/
+#pagetop {
+  text-align: right;
+  padding-right: 10px;
+  padding-bottom: 10px; }
+  #pagetop a {
+    text-decoration: none; }
+    #pagetop a img {
+      width: 30px; }
+
+/* flow
+-------------------------------------------------------------------------------flowページここから----*/
+/* main_imag -----------------------------------------------------------*/
+#fl_main_img {
+  background: url(../images/flow/flow.png) center center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  z-index: 30; }
+  #fl_main_img .main_title {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(67, 129, 204, 0.7);
+    -moz-border-radius: 400px 250px 500px 350px/360px 560px 450px 230px;
+    -webkit-border-radius: 400px;
+    border-radius: 400px 250px 500px 350px/360px 560px 450px 230px;
+    width: 500px;
+    height: 150px;
+    z-index: 40; }
+    #fl_main_img .main_title p {
+      font-size: 60px;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding-top: 40px; }
+
+@media (max-width: 550px) {
+  #fl_main_img {
+    background: url(../images/flow_sp/flow.png) center center; }
+    #fl_main_img .main_title {
+      width: 250px;
+      height: 100px;
+      z-index: 40; }
+      #fl_main_img .main_title p {
+        font-size: 45px;
+        padding-top: 25px; } }
+/* content ----------------------------------------------------------------*/
+#fl_container {
+  width: 960px;
+  margin: auto;
+  /* ここからbox1 ---------------------------*/
+  /* box2ここから-----------------------------------*/ }
+  #fl_container .flbox1 {
+    padding: 0;
+    position: relative;
+    height: 400px;
+    margin-bottom: 60px; }
+    #fl_container .flbox1 .flbox1_bg {
+      background: #f19f4d;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+      opacity: 0.7;
+      height: 280px;
+      width: 850px;
+      margin-top: 130px;
+      bottom: 0;
+      margin-left: 50px; }
+    #fl_container .flbox1 .flbox1_container {
+      width: 960px;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto; }
+      #fl_container .flbox1 .flbox1_container .flbox1_title {
+        position: absolute;
+        margin: 0;
+        font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+        font-size: 45px;
+        color: #555;
+        width: 960px;
+        text-align: center;
+        font-weight: lighter;
+        left: 25px;
+        top: -10px; }
+      #fl_container .flbox1 .flbox1_container .flbox1_img {
+        width: 380px; }
+      #fl_container .flbox1 .flbox1_container .flbox1_text {
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        position: absolute;
+        background: white;
+        width: 800px;
+        padding: 20px;
+        top: 50px;
+        right: 0; }
+        #fl_container .flbox1 .flbox1_container .flbox1_text .step {
+          width: 100px;
+          margin-right: 10px; }
+          #fl_container .flbox1 .flbox1_container .flbox1_text .step:last-child {
+            margin-right: 0; }
+          #fl_container .flbox1 .flbox1_container .flbox1_text .step h3 {
+            text-align: center; }
+        #fl_container .flbox1 .flbox1_container .flbox1_text .next_pc {
+          margin-top: 100px;
+          margin-left: 10px;
+          margin-right: 10px; }
+        #fl_container .flbox1 .flbox1_container .flbox1_text .next_sp {
+          display: none; }
+  #fl_container .flbox2 {
+    padding: 0;
+    position: relative;
+    height: 900px;
+    margin-bottom: 100px;
+    position: relative; }
+    #fl_container .flbox2 .flbox2_bg {
+      position: absolute;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+      opacity: 0.7; }
+    #fl_container .flbox2 .flbox2_title {
+      position: absolute;
+      margin: 0;
+      font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+      font-size: 45px;
+      color: #555;
+      width: 960px;
+      text-align: left;
+      font-weight: lighter;
+      left: 25px;
+      top: -40px; }
+    #fl_container .flbox2 .comment {
+      position: absolute;
+      font-size: 1.8rem;
+      margin-left: 25px; }
+    #fl_container .flbox2 .tkcho_box {
+      position: absolute;
+      width: 900px;
+      left: 20px;
+      right: 0;
+      top: 70px; }
+      #fl_container .flbox2 .tkcho_box .tkcho {
+        background: white;
+        margin-bottom: 20px;
+        font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+        padding: 10px; }
+        #fl_container .flbox2 .tkcho_box .tkcho h4 {
+          font-size: 2.0rem;
+          width: 900px;
+          text-align: center;
+          margin-top: 0;
+          margin-bottom: 20px; }
+        #fl_container .flbox2 .tkcho_box .tkcho p {
+          font-size: 1.4rem;
+          line-height: 1.8; }
+          #fl_container .flbox2 .tkcho_box .tkcho p span {
+            color: #4484ce;
+            font-weight: bold; }
+
+@media (max-width: 550px) {
+  #fl_container {
+    max-width: 550px;
+    width: 100%;
+    /* ここからbox1 -------------------------------*/
+    /* box2ここから--------------------------------------*/ }
+    #fl_container .flbox1 {
+      height: 800px;
+      margin-bottom: 0; }
+      #fl_container .flbox1 .flbox1_bg {
+        height: 600px;
+        width: 90%;
+        margin-top: 80px;
+        margin-left: 5%; }
+      #fl_container .flbox1 .flbox1_container {
+        max-width: 550px;
+        width: 100%; }
+        #fl_container .flbox1 .flbox1_container .flbox1_title {
+          font-size: 30px;
+          max-width: 550px;
+          width: 100%;
+          left: 0;
+          top: -40px; }
+        #fl_container .flbox1 .flbox1_container .flbox1_img {
+          width: 200px; }
+        #fl_container .flbox1 .flbox1_container .flbox1_text {
+          -webkit-flex-direction: column;
+          flex-direction: column;
+          width: 85%;
+          padding: 10px;
+          top: 40px; }
+          #fl_container .flbox1 .flbox1_container .flbox1_text img {
+            width: 60px;
+            margin-top: 15px; }
+          #fl_container .flbox1 .flbox1_container .flbox1_text .step {
+            display: -webkit-flex;
+            display: flex;
+            width: 100%;
+            margin-left: 5px;
+            margin-right: 5px; }
+            #fl_container .flbox1 .flbox1_container .flbox1_text .step h3 {
+              text-align: left; }
+          #fl_container .flbox1 .flbox1_container .flbox1_text .text {
+            margin-left: 10px;
+            margin-right: 10px; }
+          #fl_container .flbox1 .flbox1_container .flbox1_text .next_pc {
+            display: none; }
+          #fl_container .flbox1 .flbox1_container .flbox1_text .next_sp {
+            display: block;
+            text-align: center; }
+            #fl_container .flbox1 .flbox1_container .flbox1_text .next_sp img {
+              width: auto;
+              height: 20px;
+              margin: 5px; }
+    #fl_container .flbox2 {
+      height: 1300px;
+      margin-bottom: 100px; }
+      #fl_container .flbox2 .flbox2_bg img {
+        max-width: 550px;
+        width: 100%;
+        height: 558px; }
+      #fl_container .flbox2 .flbox2_title {
+        font-size: 30px;
+        max-width: 550px;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        top: -50px; }
+      #fl_container .flbox2 .comment {
+        font-size: 1.3rem;
+        margin-left: 0; }
+        #fl_container .flbox2 .comment p {
+          width: 320px;
+          text-align: center; }
+      #fl_container .flbox2 .tkcho_box {
+        width: 90%;
+        left: 5%;
+        top: 50px; }
+        #fl_container .flbox2 .tkcho_box .tkcho h4 {
+          font-size: 1.5rem;
+          width: 100%;
+          margin-top: 10px; }
+        #fl_container .flbox2 .tkcho_box .tkcho p {
+          font-size: 1.3rem;
+          line-height: 1.8; } }
+/* works
+-----------------------------------------------------------------------------worksここから---------*/
+/* main_img -----------------------------------------------------------*/
+#wk_main_img {
+  background: url(../images/works/works.png) center center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  z-index: 30; }
+  #wk_main_img .main_title {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(67, 129, 204, 0.7);
+    -moz-border-radius: 400px 250px 500px 350px/360px 560px 450px 230px;
+    -webkit-border-radius: 400px;
+    border-radius: 400px 250px 500px 350px/360px 560px 450px 230px;
+    width: 500px;
+    height: 150px;
+    z-index: 40; }
+    #wk_main_img .main_title p {
+      font-size: 60px;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding-top: 40px; }
+
+@media (max-width: 550px) {
+  #wk_main_img {
+    background: url(../images/works_sp/works.png) center center; }
+    #wk_main_img .main_title {
+      width: 250px;
+      height: 100px;
+      z-index: 40; }
+      #wk_main_img .main_title p {
+        font-size: 45px;
+        padding-top: 25px; } }
+/*content ---------------------------------------------------------*/
+.bg_controls {
+  background: #7d7d7d;
+  margin-bottom: 20px; }
+
+.controls {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .controls .filter {
+    font-family: 'Mina', sans-serif;
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #f19f4d;
+    cursor: pointer; }
+    .controls .filter:hover {
+      color: #f9cf00; }
+
+#container {
+  width: 1000px;
+  min-height: 900px;
+  margin: auto; }
+  #container img {
+    width: 245px; }
+  @media (max-width: 960px) {
+    #container img {
+      width: 235px; } }
+  #container .mix {
+    display: none; }
+
+@media (max-width: 550px) {
+  .bg_controls {
+    margin-bottom: 10px; }
+
+  .controls {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    .controls .filter {
+      font-size: 1.8rem;
+      font-weight: bold;
+      line-height: 2.0;
+      padding-left: 10px;
+      padding-right: 10px; }
+      .controls .filter:hover {
+        color: #f19f4d; }
+
+  #container {
+    width: 320px;
+    min-height: 300px; }
+    #container img {
+      width: 157px; } }
+/* plicy -----------------------------------------------------------------------policyここから-------*/
+/* main_imag -----------------------------------------------------------*/
+#pl_main_img {
+  background: url(../images/contact/contact.png) center center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  z-index: 30; }
+  #pl_main_img .main_title {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(67, 129, 204, 0.7);
+    -moz-border-radius: 400px 250px 500px 350px/360px 560px 450px 230px;
+    -webkit-border-radius: 400px;
+    border-radius: 400px 250px 500px 350px/360px 560px 450px 230px;
+    width: 500px;
+    height: 150px;
+    z-index: 40; }
+    #pl_main_img .main_title p {
+      font-size: 30px;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding-top: 40px; }
+
+@media (max-width: 550px) {
+  #pl_main_img {
+    background: url(../images/contact_sp/contact.png) center center; }
+    #pl_main_img .main_title {
+      width: 250px;
+      height: 100px;
+      z-index: 40; }
+      #pl_main_img .main_title p {
+        font-size: 20px;
+        padding-top: 25px; } }
+/* content --------------------------------------------------------------*/
+#policy {
+  width: 960px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  #policy h1 {
+    color: #555;
+    margin-bottom: 10px; }
+  #policy h2 {
+    color: #555;
+    padding: 0.5rem;
+    border-left: 5px solid #f19f4d; }
+  #policy p {
+    font-size: 1.4rem;
+    line-height: 1.8; }
+
+@media (max-width: 550px) {
+  #policy {
+    width: 100%;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    padding-left: 5px;
+    padding-right: 5px; } }
+/*contact----------------------------------------------------------------------contactここから-----*/
+/* main_img -----------------------------------------------------------*/
+#ct_main_img {
+  background: url(../images/contact/contact.png) center center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  z-index: 30; }
+  #ct_main_img .main_title {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(67, 129, 204, 0.7);
+    -moz-border-radius: 400px 250px 500px 350px/360px 560px 450px 230px;
+    -webkit-border-radius: 400px;
+    border-radius: 400px 250px 500px 350px/360px 560px 450px 230px;
+    width: 500px;
+    height: 150px;
+    z-index: 40; }
+    #ct_main_img .main_title p {
+      font-size: 60px;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding-top: 40px; }
+
+@media (max-width: 550px) {
+  #ct_main_img {
+    background: url(../images/contact_sp/contact.png) center center; }
+    #ct_main_img .main_title {
+      width: 250px;
+      height: 100px;
+      z-index: 40; }
+      #ct_main_img .main_title p {
+        font-size: 45px;
+        padding-top: 25px; } }
+/*content----------------------------------------------------------------*/
+form {
+  width: 850px;
+  margin: auto; }
+  form .fr_text {
+    font-size: 1.6rem;
+    color: #555;
+    padding: 20px 0; }
+  form p {
+    font-size: 2.0rem;
+    color: #555;
+    position: relative; }
+    form p span {
+      position: absolute;
+      text-align: center;
+      font-size: 1.4rem;
+      padding: 1px 3px 1px 4px;
+      margin-left: 10px;
+      top: 2px;
+      color: white;
+      background: #f9cf00; }
+  form input {
+    width: 50%;
+    height: 40px;
+    font-size: 1.4rem;
+    border: none; }
+  form textarea {
+    width: 100%;
+    height: 300px;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    border: none; }
+  form button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    background: #f19f4d;
+    font-size: 2.0rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: auto;
+    display: block; }
+
+@media (max-width: 550px) {
+  form {
+    width: 95%;
+    background: #f2f2f2; }
+    form .fr_text {
+      font-size: 1.3rem;
+      padding: 10px 0 10px 5px; }
+    form p {
+      font-size: 1.8rem; }
+    form input {
+      width: 100%; }
+    form textarea {
+      height: 200px; }
+    form button {
+      clear: right;
+      width: 100%;
+      height: 40px; } }
+/* confirm.php -------------------------------------------------------confirm.phpここから-----*/
+.echo {
+  width: 650px;
+  margin: auto;
+  font-size: 1.6rem;
+  line-height: 2.0;
+  padding-top: 20px;
+  height: 1000px; }
+
+@media (max-width: 550px) {
+  .echo {
+    width: 95%;
+    font-size: 1.4rem;
+    background: #f2f2f2; } }
+ /* contact_01
+-------------------------------------------------------------------------contactここから----*/
+/* main_imag -----------------------------------------------------------*/
+/*
+#ct_main_img{
+     background: url(../images/contact/contact.png) center center;
+     background-size: cover;
+     padding-top: 70px;
+     padding-bottom: 70px;
+     z-index: 30;
+
+     .main_title{
+         margin-left: auto;
+         margin-right: auto;
+         background: rgba(67, 129, 204, 0.7);
+         @include border-radius(400px 250px 500px 350px / 360px 560px 450px 230px);
+         width: 500px;
+         height: 150px;
+         z-index: 40;
+             
+        p{
+            font-size: 60px;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding-top: 40px;
+        }//p
+    }//main_title
+ }//#ct_main_img
+ 
+ 
+ @media(max-width: 550px){
+    #ct_main_img{
+         background: url(../images/contact_sp/contact.png) center center;
+    
+         .main_title{
+             width: 250px;
+             height: 100px;
+             z-index: 40;
+                 
+            p{
+                font-size: 45px;
+                padding-top: 25px;
+            }//p
+        }//main_title
+     }//#ct_main_img
+ }//max-width550
+*/
+/*contact ----------------------*/
+/*
+iframe{
+     width: 100%; 
+     height: 1500px;
+     border: none;
+}//iframe
+*/
+
+/*# sourceMappingURL=atyle.css.map */
