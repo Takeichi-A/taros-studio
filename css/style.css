@@ -85,18 +85,30 @@ li {
     max-width: 550px;
     width: auto; }
     #head_in .head_logo {
+      position: relative;
       width: 50%;
       padding: 0; }
-      #head_in .head_logo img {
-        width: 130px; }
+      #head_in .head_logo h1 {
+        position: absolute; }
+        #head_in .head_logo h1 img {
+          width: 130px; }
     #head_in .navi .pc_navi {
       display: none; }
     #head_in .navi .sp_navi {
       display: block; }
+      #head_in .navi .sp_navi #sp_navi_btn {
+        padding: 0; }
+        #head_in .navi .sp_navi #sp_navi_btn .hamburger-box {
+          top: 5px; }
+          #head_in .navi .sp_navi #sp_navi_btn .hamburger-box .hamburger-inner, #head_in .navi .sp_navi #sp_navi_btn .hamburger-box .hamburger-inner:after, #head_in .navi .sp_navi #sp_navi_btn .hamburger-box .hamburger-inner:before {
+            height: 2px;
+            background-color: #555; }
+        #head_in .navi .sp_navi #sp_navi_btn.is-active .hamburger-inner {
+          background-color: transparent; }
       #head_in .navi .sp_navi .sp_navi_li {
         width: 180px;
         position: absolute;
-        top: 50px;
+        top: 46px;
         right: 0;
         margin: 0;
         padding: 0;
@@ -177,7 +189,6 @@ li {
   position: relative;
   height: 400px; }
   #plofile .plofile_bg {
-    position: absolote;
     background: #f19f4d;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
     opacity: 0.7;
@@ -248,7 +259,6 @@ li {
   position: relative;
   height: 550px; }
   #service .service_bg {
-    position: absolote;
     background: #f9cf00;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
     opacity: 0.7;
@@ -431,6 +441,11 @@ footer {
           font-size: 1.6rem; }
           footer #footer_container ul li a:hover {
             color: #9b9b9b; }
+    footer #footer_container .policy a {
+      color: white;
+      text-decoration: none; }
+      footer #footer_container .policy a:hover {
+        color: #9b9b9b; }
     footer #footer_container .copy {
       padding-top: 30px;
       padding-bottom: 5px; }
@@ -446,6 +461,8 @@ footer {
       margin: auto; }
       footer #footer_container ul li {
         line-height: 1.8; }
+    footer #footer_container .policy a:hover {
+      color: white; }
     footer #footer_container .copy {
       font-size: 0.7rem; } }
 
@@ -1075,9 +1092,67 @@ footer {
     min-height: 300px; }
     #container img {
       width: 157px; } }
-/* contact
--------------------------------------------------------------------------contactここから----*/
+/* plicy -----------------------------------------------------------------------policyここから-------*/
 /* main_imag -----------------------------------------------------------*/
+#pl_main_img {
+  background: url(../images/contact/contact.png) center center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  z-index: 30; }
+  #pl_main_img .main_title {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(67, 129, 204, 0.7);
+    -moz-border-radius: 400px 250px 500px 350px/360px 560px 450px 230px;
+    -webkit-border-radius: 400px;
+    border-radius: 400px 250px 500px 350px/360px 560px 450px 230px;
+    width: 500px;
+    height: 150px;
+    z-index: 40; }
+    #pl_main_img .main_title p {
+      font-size: 30px;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding-top: 40px; }
+
+@media (max-width: 550px) {
+  #pl_main_img {
+    background: url(../images/contact_sp/contact.png) center center; }
+    #pl_main_img .main_title {
+      width: 250px;
+      height: 100px;
+      z-index: 40; }
+      #pl_main_img .main_title p {
+        font-size: 20px;
+        padding-top: 25px; } }
+/* content --------------------------------------------------------------*/
+#policy {
+  width: 960px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  #policy h1 {
+    color: #555;
+    margin-bottom: 10px; }
+  #policy h2 {
+    color: #555;
+    padding: 0.5rem;
+    border-left: 5px solid #f19f4d; }
+  #policy p {
+    font-size: 1.4rem;
+    line-height: 1.8; }
+
+@media (max-width: 550px) {
+  #policy {
+    width: 100%;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    padding-left: 5px;
+    padding-right: 5px; } }
+/*contact----------------------------------------------------------------------contactここから-----*/
+/* main_img -----------------------------------------------------------*/
 #ct_main_img {
   background: url(../images/contact/contact.png) center center;
   background-size: cover;
@@ -1111,10 +1186,122 @@ footer {
       #ct_main_img .main_title p {
         font-size: 45px;
         padding-top: 25px; } }
+/*content----------------------------------------------------------------*/
+form {
+  width: 850px;
+  margin: auto; }
+  form .fr_text {
+    font-size: 1.6rem;
+    color: #555;
+    padding: 20px 0; }
+  form p {
+    font-size: 2.0rem;
+    color: #555;
+    position: relative; }
+    form p span {
+      position: absolute;
+      text-align: center;
+      font-size: 1.4rem;
+      padding: 1px 3px 1px 4px;
+      margin-left: 10px;
+      top: 2px;
+      color: white;
+      background: #f9cf00; }
+  form input {
+    width: 50%;
+    height: 40px;
+    font-size: 1.4rem;
+    border: none; }
+  form textarea {
+    width: 100%;
+    height: 300px;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    border: none; }
+  form button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    background: #f19f4d;
+    font-size: 2.0rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: auto;
+    display: block; }
+
+@media (max-width: 550px) {
+  form {
+    width: 95%;
+    background: #f2f2f2; }
+    form .fr_text {
+      font-size: 1.3rem;
+      padding: 10px 0 10px 5px; }
+    form p {
+      font-size: 1.8rem; }
+    form input {
+      width: 100%; }
+    form textarea {
+      height: 200px; }
+    form button {
+      clear: right;
+      width: 100%;
+      height: 40px; } }
+ /* contact_01
+-------------------------------------------------------------------------contactここから----*/
+/* main_imag -----------------------------------------------------------*/
+/*
+#ct_main_img{
+     background: url(../images/contact/contact.png) center center;
+     background-size: cover;
+     padding-top: 70px;
+     padding-bottom: 70px;
+     z-index: 30;
+
+     .main_title{
+         margin-left: auto;
+         margin-right: auto;
+         background: rgba(67, 129, 204, 0.7);
+         @include border-radius(400px 250px 500px 350px / 360px 560px 450px 230px);
+         width: 500px;
+         height: 150px;
+         z-index: 40;
+             
+        p{
+            font-size: 60px;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding-top: 40px;
+        }//p
+    }//main_title
+ }//#ct_main_img
+ 
+ 
+ @media(max-width: 550px){
+    #ct_main_img{
+         background: url(../images/contact_sp/contact.png) center center;
+    
+         .main_title{
+             width: 250px;
+             height: 100px;
+             z-index: 40;
+                 
+            p{
+                font-size: 45px;
+                padding-top: 25px;
+            }//p
+        }//main_title
+     }//#ct_main_img
+ }//max-width550
+*/
 /*contact ----------------------*/
-iframe {
-  width: 100%;
-  height: 1500px;
-  border: none; }
+/*
+iframe{
+     width: 100%; 
+     height: 1500px;
+     border: none;
+}//iframe
+*/
 
 /*# sourceMappingURL=style.css.map */

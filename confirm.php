@@ -1,10 +1,47 @@
+<?php
+    //値が取れてるかの確認
+    // echo "<pre>";
+    // var_dump($_POST);
+    // echo "</pre>";
+    // exit;
+    
+    
+    //悪意のあるコードの無害化
+    function h($str) {
+        return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');    
+    }
+    //日本語化
+    mb_language("Japanese");
+    mb_internal_encoding("UTF-8");
+    //送信先
+    $to = 'info@taros-studio.com';
+    //メールの件名
+    $subject = h($_POST["subject"]);
+    //入力内容を全て結合したメールの内容
+    $message = "お名前:" . h($POST_["name"])
+            . "\nふりがな :" . h($_POST["furigana"])
+            . "\n貴社名 :" . h($_POST["company"])
+            . "\nE-mail :" . h($_POST["email"])
+            . "\nお電話番号 :" . h($_POST["tel"])
+            . "\n件名 :" . h($_POST["subject"])
+            . "\nお問い合わせ内容 :" . h($_POST["body"]);
+    //送信元
+    $header = "From: " . h($_POST["email"]);
+    //メールの送信
+    if(mb_send_mail($to, $subject, $message, $header)){
+        echo "メールを送信しました";
+    } else {
+        echo "メールの送信に失敗しました";
+    };
+?>
+    
 <!DOCTYPE html>
 <html lang="ja">
     
     <head>
         <meta charset="utf-8">
         <title>Taros-Studio</title>
-        <meta name="direction" content="Taros-Studioのお問い合わせページです。映像、キャラクター、ロゴ、パンフレット、リーフレット、マンガ広告制作ならTaros-Studio。個人事業主様を中心に制作をしています。動画ならプロモーション動画制作から講座撮影まで行います。デザインは様々な目的に合わせて制作いたします。" >
+        <meta name="direction" content="Taros-Studioの実績を紹介するページです。映像、キャラクター、ロゴ、パンフレット、リーフレット、マンガ広告制作ならTaros-Studio。個人事業主様を中心に制作をしています。動画ならプロモーション動画制作から講座撮影まで行います。デザインは様々な目的に合わせて制作いたします。" >
         <meta name="keywords" content="サービズ、映像制作,パンフレット,キャラクターデザイン,マンガ,プロモーション,講座撮影,名古屋,愛知県,東海,taro,studio,tarosstudio,taros-studio,たろずすたじお" >
         <meta name="viewport" content="width=device-width, initial-scale=1" >
         <link  href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet">
@@ -13,7 +50,6 @@
         <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css" >
         <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css" >
         <link rel="stylesheet" type="text/css" href="lightbox/jquery.fancybox.css">
-        <link rel="stylesheet" type="text/css" href="css/hamburgers.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="owlcarousel/owl.carousel.min.js"></script>
         <script src="//cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
@@ -37,21 +73,16 @@
                     <h1><a href="index.html"><img src="images/top_sp/logo.png" alt="Taros-Studio" srcset="images/top_sp/logo@2x.png 2x" /></a></h1>
                 </div>
                 <div class="navi">
-   <!-- sp_navi --> 
-                   <div class="sp_navi">
-                       <div id="sp_navi_btn" class="hamburger hamburger--spring">
-                          <div class="hamburger-box">
-                            <div class="hamburger-inner"></div>
-                          </div>
-                       </div>
-                       <ul class="sp_navi_li">
+   <!-- sp_navi --> <div class="sp_navi">
+                       <img id="sp_navi_btn" src="images/top_sp/menu.png" alt="sp_navi" srcset="images/top_sp/menu@2x.png 2x" />
+                        <ul class="sp_navi_li">
                             <li><a href="index.html" class="uppercase">home</a></li>
                             <li><a href="service.html" class="uppercase">sevice</a></li>
                             <li><a href="flow.html" class="uppercase">flow</a></li>
                             <li><a href="works.html" class="uppercase">works</a></li>
                             <li><a href="contact.html" class="uppercase">contact</a></li>
                         </ul>
-                   </div>
+                    </div>
   <!-- pc_navi -->  <div class="pc_navi">
                         <ul class="pc_navi_li">
                             <li><a href="index.html" class="uppercase">home</a></li>
@@ -67,7 +98,7 @@
         
 
 <!-- main_img -->
-        <div id="ct_main_img">
+        <div id="ct1_main_img">
                 <div class="main_title">
                     <p class="main_text uppercase">contact</p>
                 </div>
@@ -75,33 +106,6 @@
 
 
 <!-- content -->
-    <form action="confirm.php" method="post">
-        <p class="fr_text">
-            制作のご依頼・ご相談・お見積もりなどお気軽にお問い合わせくださいませ。<br>
-            必須の項目は必ずご記入をお願いいたします。
-        </p>
-        <p>お名前<span>必須</span></p>
-        <input type="text" name="name" placeholder="例）山田太郎" />
-        <p>ふりがな<span>必須</span></p>
-        <input type="text" name="furigana" placeholder="例）やまだたろう" />
-        <p>貴社名</p>
-        <input type="text" name="company" placeholder="任意です" />
-        <p>E-mail<span>必須</span></p>
-        <input type="mail" name="email" placeholder="example@mail.co.jp" />
-        <p>お電話番号</p>
-        <input type="tel" name="tel" placeholder="任意です（ハイフンあり）" />
-        <p>件名<span>必須</span></p>
-        <input type="text" name="subject" placeholder="例）見積もりについて" />
-        <p>お問い合わせ内容<span>必須</span></p>
-        <textarea type="textarea" name="body" placeholder="お気軽にご記入ください"></textarea>
-        <p class="fr_text">
-            入力内容をご確認のうえ送信おねがいします。
-        </p>
-        <button type="submit">内容を送信する</button>
-    </form>
-    
-    
-
     <div id="pagetop">
         <a href="#head_in"><img src="images/top_sp/pagetop.png" alt="" srcset="images/top_sp/pagetop@2x.png 2x" /></a>
     </div>
