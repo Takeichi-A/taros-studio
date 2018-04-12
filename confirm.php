@@ -22,6 +22,7 @@
             . "\nふりがな :" . h($_POST["furigana"])
             . "\n貴社名 :" . h($_POST["company"])
             . "\nE-mail :" . h($_POST["email"])
+            . "\nご住所 :" . h($_POST["address"])
             . "\nお電話番号 :" . h($_POST["tel"])
             . "\n件名 :" . h($_POST["subject"])
             . "\nお問い合わせ内容 :" . h($_POST["body"]);
@@ -71,7 +72,7 @@
                        <img id="sp_navi_btn" src="images/top_sp/menu.png" alt="sp_navi" srcset="images/top_sp/menu@2x.png 2x" />
                         <ul class="sp_navi_li">
                             <li><a href="index.html" class="uppercase">home</a></li>
-                            <li><a href="service.html" class="uppercase">sevice</a></li>
+                            <li><a href="service.html" class="uppercase">service</a></li>
                             <li><a href="flow.html" class="uppercase">flow</a></li>
                             <li><a href="works.html" class="uppercase">works</a></li>
                             <li><a href="contact.html" class="uppercase">contact</a></li>
@@ -80,7 +81,7 @@
   <!-- pc_navi -->  <div class="pc_navi">
                         <ul class="pc_navi_li">
                             <li><a href="index.html" class="uppercase">home</a></li>
-                            <li><a href="service.html" class="uppercase">sevice</a></li>
+                            <li><a href="service.html" class="uppercase">service</a></li>
                             <li><a href="flow.html" class="uppercase">flow</a></li>
                             <li><a href="works.html" class="uppercase">works</a></li>
                             <li><a href="contact.html" class="uppercase">contact</a></li>
@@ -126,7 +127,7 @@
          <p><a href="https://ja-jp.facebook.com/taros.studio/" class="facebook">f</a></p>
              <ul>
                 <li><a href="index.html" class="uppercase">home</a></li>
-                <li><a href="service.html" class="uppercase">sevice</a></li>
+                <li><a href="service.html" class="uppercase">service</a></li>
                 <li><a href="flow.html" class="uppercase">flow</a></li>
                 <li><a href="works.html" class="uppercase">works</a></li>
                 <li><a href="contact.html" class="uppercase">contact</a></li>
