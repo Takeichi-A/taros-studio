@@ -423,6 +423,7 @@ footer {
     footer #footer_container .facebook {
       margin-top: 10px;
       margin-bottom: 0;
+      font-family: 'Mina', sans-serif;
       font-size: 3.0rem;
       font-weight: bold;
       color: #fff; }
