@@ -28,11 +28,11 @@
     //送信元
     $header = "From: " . h($_POST["email"]);
     //メールの送信
-    if(mb_send_mail($to, $subject, $message, $header)){
-        echo "メールを送信しました";
-    } else {
-        echo "メールの送信に失敗しました";
-    };
+    //if(mb_send_mail($to, $subject, $message, $header)){
+    //    echo "メールを送信しました";
+   // } else {
+   //     echo "メールの送信に失敗しました";
+   // };
 ?>
     
 <!DOCTYPE html>
@@ -98,7 +98,7 @@
         
 
 <!-- main_img -->
-        <div id="ct1_main_img">
+        <div id="ct_main_img">
                 <div class="main_title">
                     <p class="main_text uppercase">contact</p>
                 </div>
@@ -106,6 +106,15 @@
 
 
 <!-- content -->
+    <div class="echo">
+        <?php
+         if(mb_send_mail($to, $subject, $message, $header)){
+            echo "メールを送信しました";
+        } else {
+            echo "メールの送信に失敗しました";
+        };
+        ?>
+    </div>
     <div id="pagetop">
         <a href="#head_in"><img src="images/top_sp/pagetop.png" alt="" srcset="images/top_sp/pagetop@2x.png 2x" /></a>
     </div>

@@ -1737,6 +1737,21 @@ li{
  }//maxwidth550
  
  
+ /* confirm.php -------------------------------------------------------confirm.phpここから-----*/
+ .echo{
+     width: 960px;
+     margin: auto;
+     font-size: 1.8rem;
+     line-height: 2.0;
+     padding-top: 20px;
+     height: 1000px;
+ }//echo
+ 
+ @media(max-width: 550px){
+     width: 95%;
+ }//maxwidth550
+ 
+ 
  /* contact_01
 -------------------------------------------------------------------------contactここから----*/
 
