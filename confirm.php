@@ -27,12 +27,6 @@
             . "\nお問い合わせ内容 :" . h($_POST["body"]);
     //送信元
     $header = "From: " . h($_POST["email"]);
-    //メールの送信
-    //if(mb_send_mail($to, $subject, $message, $header)){
-    //    echo "メールを送信しました";
-   // } else {
-   //     echo "メールの送信に失敗しました";
-   // };
 ?>
     
 <!DOCTYPE html>
@@ -106,12 +100,17 @@
 
 
 <!-- content -->
+    
     <div class="echo">
         <?php
+        //メールの送信
          if(mb_send_mail($to, $subject, $message, $header)){
-            echo "メールを送信しました";
+            echo "メールが送信されました。"
+            . "\n お問い合わせありがとうございます。１週間以内にご返信させていただきます。:"
+            . "\n １週間経っても返信がない場合はお手数ですが再度ご連絡をお願いいたします。:";
         } else {
-            echo "メールの送信に失敗しました";
+            echo "メールの送信に失敗しました。"
+            . "\n 誠に申し訳ございませんが、再度お問い合わせをお願いいたします。:";
         };
         ?>
     </div>
