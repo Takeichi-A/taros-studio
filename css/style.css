@@ -315,30 +315,30 @@ li {
     #service .service_container .service_contents {
       position: absolute;
       top: 260px;
-      left: 55px;
+      left: -40px;
       display: -webkit-flex;
       display: flex;
-      width: 850px;
+      width: 1050px;
       justify-content: space-between; }
       #service .service_container .service_contents .content {
         position: relative; }
         #service .service_container .service_contents .content img {
-          width: 200px; }
+          width: 170px; }
         #service .service_container .service_contents .content p {
           position: absolute;
           font-size: 1.6rem;
           color: #fff;
-          top: 60px;
+          top: 55px;
           bottom: 0;
           left: 0;
           right: 0;
           text-align: center; }
         #service .service_container .service_contents .content .line {
-          top: 70px; }
+          top: 65px; }
 
 @media (max-width: 550px) {
   #service .service_bg {
-    height: 500px;
+    height: 450px;
     margin-top: 80px;
     margin-right: 0; }
   #service .service_container {
@@ -369,14 +369,17 @@ li {
       justify-content: center;
       flex-wrap: wrap; }
       #service .service_container .service_contents .content {
-        margin: 0 5px; }
+        margin: 0 3px; }
         #service .service_container .service_contents .content img {
           width: 150px;
-          padding-top: 10px; }
+          height: 60px;
+          object-fit: cover;
+          padding-top: 10px;
+          padding: 0; }
         #service .service_container .service_contents .content p {
-          top: 45px; }
+          top: -7px; }
         #service .service_container .service_contents .content .line {
-          top: 60px; } }
+          top: 2px; } }
 /* works -------------------------------------------------------------------------------*/
 #works {
   width: 960px;
@@ -403,8 +406,7 @@ li {
 @media (max-width: 550px) {
   #works {
     max-width: 550px;
-    width: auto;
-    margin-top: 120px; }
+    width: auto; }
     #works h1 {
       margin-bottom: 10px;
       font-size: 40px; }
@@ -503,6 +505,33 @@ footer {
         font-size: 45px;
         padding-top: 25px; } }
 /* content -----------------------------------------------------------------------------*/
+#inner_link {
+  background: #7d7d7d; }
+  #inner_link ul {
+    margin: 0;
+    padding: 20px;
+    text-align: center; }
+    #inner_link ul li {
+      display: inline;
+      margin: auto;
+      font-family: 'Mina', sans-serif;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 2.0rem;
+      font-weight: bold; }
+      #inner_link ul li a {
+        color: #f19f4d; }
+        #inner_link ul li a:hover {
+          color: #f9cf00; }
+
+@media (max-width: 550px) {
+  #inner_link ul {
+    padding: 10px; }
+    #inner_link ul li {
+      font-size: 1.8rem;
+      line-height: 2.0; }
+      #inner_link ul li a:hover {
+        color: #f19f4d; } }
 #sr_container {
   /* ここからbox1 --------------------------*/
   /* ここからbox2 ------------------------------------*/ }
@@ -545,6 +574,8 @@ footer {
         top: -10px; }
       #sr_container .srbox1 .srbox1_container .chara {
         left: 90px; }
+      #sr_container .srbox1 .srbox1_container .web {
+        left: 50px; }
       #sr_container .srbox1 .srbox1_container .srbox1_img {
         width: 380px; }
       #sr_container .srbox1 .srbox1_container .srbox1_text {
@@ -680,6 +711,8 @@ footer {
       #sr_container .srbox1 .srbox1_bg {
         margin-top: 100px;
         margin-left: 5%; }
+      #sr_container .srbox1 .wd_bg {
+        margin-top: 200px; }
       #sr_container .srbox1 .srbox1_container {
         max-width: 550px;
         width: 100%; }
@@ -689,6 +722,8 @@ footer {
           right: 0;
           top: -40px; }
         #sr_container .srbox1 .srbox1_container .chara {
+          left: 0; }
+        #sr_container .srbox1 .srbox1_container .web {
           left: 0; }
         #sr_container .srbox1 .srbox1_container .srbox1_img {
           width: 200px; }
@@ -753,13 +788,11 @@ footer {
                 background: white; } }
 /* pagetop ----------------------------------------------------------------------------*/
 #pagetop {
-  text-align: right;
-  padding-right: 10px;
-  padding-bottom: 10px; }
-  #pagetop a {
-    text-decoration: none; }
-    #pagetop a img {
-      width: 30px; }
+  position: fixed;
+  bottom: 20px;
+  right: 20px; }
+  #pagetop img {
+    width: 30px; }
 
 /* flow
 -------------------------------------------------------------------------------flowページここから----*/
@@ -865,7 +898,7 @@ footer {
   #fl_container .flbox2 {
     padding: 0;
     position: relative;
-    height: 900px;
+    height: 1200px;
     margin-bottom: 100px;
     position: relative; }
     #fl_container .flbox2 .flbox2_bg {
@@ -966,7 +999,7 @@ footer {
               height: 20px;
               margin: 5px; }
     #fl_container .flbox2 {
-      height: 1300px;
+      height: 2100px;
       margin-bottom: 100px; }
       #fl_container .flbox2 .flbox2_bg img {
         max-width: 550px;

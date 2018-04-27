@@ -438,28 +438,28 @@ li{
         .service_contents{
             position: absolute;
             top: 260px;
-            left: 55px;
+            left: -40px;
             @include display-flex;
-            width: 850px;
+            width: 1050px;
             justify-content: space-between;
             
             .content{
                 position: relative;
                 img{
-                    width: 200px;
+                    width: 170px;
                 }//img
                 p{
                     position: absolute;
                     font-size: 1.6rem;
                     color: #fff;
-                    top: 60px;
+                    top: 55px;
                     bottom: 0;
                     left: 0;
                     right: 0;
                     text-align: center;
                 }//p
                 .line{
-                    top: 70px;
+                    top: 65px;
                 }//line
             }//content
         }//service_contents
@@ -469,7 +469,7 @@ li{
   @media(max-width: 550px){
       #service{
         .service_bg{
-            height: 500px;
+            height: 450px;
             margin-top: 80px;
             margin-right: 0;
         }//service_bg
@@ -512,16 +512,19 @@ li{
                 justify-content: center;
                 flex-wrap: wrap;
                 .content{
-                    margin: 0 5px;
+                    margin: 0 3px;
                     img{
                         width: 150px;
+                        height: 60px;
+                        object-fit: cover;
                         padding-top: 10px;
+                        padding: 0;
                     }//img
                     p{
-                        top: 45px;
+                        top: -7px;
                     }//p
                     .line{
-                        top: 60px;
+                        top: 2px;
                     }//line
                 }//content
             }//service_contents
@@ -569,7 +572,6 @@ li{
      #works{
          max-width: 550px;
          width: auto;
-         margin-top: 120px;
          h1{
              margin-bottom: 10px;
              font-size: 40px;
@@ -729,6 +731,47 @@ li{
  }//max-width550
  
  /* content -----------------------------------------------------------------------------*/
+ #inner_link{
+     background: #7d7d7d;
+     ul{
+         margin: 0;
+         padding: 20px;
+         text-align: center;
+         li{
+             display: inline;
+             margin: auto;
+             font-family: 'Mina', sans-serif;
+             padding-left: 10px;
+             padding-right: 10px;
+             font-size: 2.0rem;
+             font-weight: bold;
+             a{
+                color: $Orange;
+                &:hover{
+                    color: $Yellow;
+                }//hover
+             }//a
+         }//li
+     }//ul
+ }//inner_link
+ 
+ @media(max-width: 550px){
+      #inner_link{
+     //background: #7d7d7d;
+     ul{
+         padding: 10px;
+         li{
+             font-size: 1.8rem;
+             line-height: 2.0;
+             a{
+                &:hover{
+                    color: $Orange;
+                }//hover
+             }//a
+         }//li
+     }//ul
+ }//inner_link
+ }//max-width550
  
  #sr_container{
      /* ここからbox1 --------------------------*/
@@ -776,6 +819,10 @@ li{
             .chara{
                 left: 90px;
             }//chara
+            
+            .web{
+                left: 50px;
+            }//web
             
             .srbox1_img{
                 width: 380px;
@@ -949,6 +996,10 @@ li{
             margin-top: 100px;
             margin-left: 5%;
         }//srbox1_bg
+        
+        .wd_bg{
+            margin-top: 200px;
+        }//wd_bg
     
         .srbox1_container{
             max-width: 550px;
@@ -964,6 +1015,10 @@ li{
             .chara{
                 left: 0;
             }//chara
+            
+            .web{
+                left: 0;
+            }//web
             
             .srbox1_img{
                 width: 200px;
@@ -1064,16 +1119,14 @@ li{
  
  
 /* pagetop ----------------------------------------------------------------------------*/
+
 #pagetop{
-        text-align: right;
-        padding-right: 10px;
-        padding-bottom: 10px;
-        a{
-            text-decoration: none;
-            img{
-                width: 30px;
-            }//img
-        }//a
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    img{
+        width: 30px;
+    }//img
 }//#pagetop
 
 
@@ -1210,7 +1263,7 @@ li{
     .flbox2{
         padding: 0;
         position: relative;
-        height: 900px;
+        height: 1200px;
         margin-bottom: 100px;
         position: relative;
         
@@ -1347,7 +1400,7 @@ li{
         /* box2ここから--------------------------------------*/
         
         .flbox2{
-            height: 1300px;
+            height: 2100px;
             margin-bottom: 100px;
             
             .flbox2_bg{
