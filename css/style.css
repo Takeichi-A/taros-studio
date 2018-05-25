@@ -871,7 +871,8 @@ footer {
           font-size: 30px;
           width: 100%;
           right: 0;
-          top: -40px; }
+          top: -40px;
+          left: 0; }
         #sr_container .srbox1 .srbox1_container .chara {
           left: 0; }
         #sr_container .srbox1 .srbox1_container .web {
