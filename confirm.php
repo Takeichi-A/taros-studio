@@ -44,11 +44,11 @@
         <link rel="icon" type="image/png" href="images/favicon.png" >
         <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css" >
         <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css" >
-        <link rel="stylesheet" type="text/css" href="lightbox/jquery.fancybox.css">
+        <link rel="stylesheet" type="text/css" href="css/animate.min.css" >
+        <link rel="stylesheet" type="text/css" href="css/hamburgers.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="owlcarousel/owl.carousel.min.js"></script>
         <script src="//cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
-        <script src="mixup/mixitup.min.js"></script>
         <script src="lightbox/jquery.fancybox.min.js"></script>
         <script src="js/wow.min.js" ></script>
         <script src="js/taros-studio.js"></script>
