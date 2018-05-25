@@ -49,7 +49,7 @@ li{
         display: none;
     }//img
     
-    @media(max-width: 768px){
+    @media(max-width: 550px){
             //max-width: 550px;
             width: 100%;
             video{
@@ -1706,7 +1706,7 @@ li{
      }//#sr_flow
  }//1024
 
-@media(max-width: 550px){
+@media(max-width: 750px){
     #sr_flow{
      
      .flbox1{
@@ -1714,6 +1714,7 @@ li{
          .step{
              @include display-flex;
              width: 100%;
+             @include border-radius(5%, 15%);
              h3{
                  text-align: left;
                  padding-left: 15px;
@@ -2438,12 +2439,11 @@ li{
     .bg_controls{
     margin-bottom: 10px;
     }//bg_controls
-    
-    .controls{
-    }//controls
+
 
     #container{
         width: 700px;
+        // min-height: 300px;
         img{
              width: 229px;
         }//img
