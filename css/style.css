@@ -51,9 +51,9 @@ li {
   -webkit-flex-direction: row;
   flex-direction: row;
   z-index: 10;
-  width: 960px;
+  width: auto;
   margin: auto;
-  padding: 10px; }
+  padding: 10px 30px; }
   #head_in .head_logo {
     -webkit-flex: 1;
     flex: 1;
@@ -61,71 +61,50 @@ li {
     padding-left: 10px; }
     #head_in .head_logo h1 {
       margin: 0; }
-  #head_in .navi {
-    padding-right: 0px; }
-    #head_in .navi .sp_navi {
-      display: none; }
-    #head_in .navi .pc_navi {
-      padding-top: 20px; }
-      #head_in .navi .pc_navi ul {
-        margin: 0; }
-        #head_in .navi .pc_navi ul li {
-          display: inline; }
-          #head_in .navi .pc_navi ul li a {
-            color: #555;
-            font-size: 1.8rem;
-            font-weight: bold;
-            padding-left: 20px; }
-            #head_in .navi .pc_navi ul li a:hover {
-              color: #a2a2a2; }
+  #head_in .navi .sp_navi {
+    display: block; }
+    #head_in .navi .sp_navi #sp_navi_btn {
+      padding: 0; }
+      #head_in .navi .sp_navi #sp_navi_btn .hamburger-box {
+        top: 10px; }
+        #head_in .navi .sp_navi #sp_navi_btn .hamburger-box .hamburger-inner, #head_in .navi .sp_navi #sp_navi_btn .hamburger-box .hamburger-inner:after, #head_in .navi .sp_navi #sp_navi_btn .hamburger-box .hamburger-inner:before {
+          height: 3px;
+          background-color: #555; }
+      #head_in .navi .sp_navi #sp_navi_btn.is-active .hamburger-inner {
+        background-color: transparent; }
+    #head_in .navi .sp_navi .sp_navi_li {
+      width: 250px;
+      position: absolute;
+      top: 46px;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(251, 251, 251, 0.9);
+      text-align: center;
+      display: none;
+      z-index: 100; }
+      #head_in .navi .sp_navi .sp_navi_li li {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        #head_in .navi .sp_navi .sp_navi_li li a {
+          display: block;
+          padding: 10px 8px;
+          border-bottom: 1px solid #555;
+          font-size: 18px;
+          color: #555;
+          text-decoration: none; }
+      #head_in .navi .sp_navi .sp_navi_li .sublist {
+        text-align: right;
+        font-size: 14px; }
 
 @media (max-width: 550px) {
   #head_in {
-    max-width: 550px;
-    width: auto; }
+    padding: 10px; }
     #head_in .head_logo {
-      position: relative;
-      width: 50%;
-      padding: 0; }
-      #head_in .head_logo h1 {
-        position: absolute; }
-        #head_in .head_logo h1 img {
-          width: 130px; }
-    #head_in .navi .pc_navi {
-      display: none; }
-    #head_in .navi .sp_navi {
-      display: block; }
-      #head_in .navi .sp_navi #sp_navi_btn {
-        padding: 0; }
-        #head_in .navi .sp_navi #sp_navi_btn .hamburger-box {
-          top: 5px; }
-          #head_in .navi .sp_navi #sp_navi_btn .hamburger-box .hamburger-inner, #head_in .navi .sp_navi #sp_navi_btn .hamburger-box .hamburger-inner:after, #head_in .navi .sp_navi #sp_navi_btn .hamburger-box .hamburger-inner:before {
-            height: 2px;
-            background-color: #555; }
-        #head_in .navi .sp_navi #sp_navi_btn.is-active .hamburger-inner {
-          background-color: transparent; }
-      #head_in .navi .sp_navi .sp_navi_li {
-        width: 180px;
-        position: absolute;
-        top: 46px;
-        right: 0;
-        margin: 0;
-        padding: 0;
-        background-color: rgba(251, 251, 251, 0.9);
-        text-align: center;
-        display: none;
-        z-index: 100; }
-        #head_in .navi .sp_navi .sp_navi_li li {
-          list-style: none;
-          margin: 0;
-          padding: 0; }
-          #head_in .navi .sp_navi .sp_navi_li li a {
-            display: block;
-            padding: 10px 8px;
-            border-bottom: 1px solid #555;
-            font-size: 14px;
-            color: #555;
-            text-decoration: none; } }
+      padding-left: 0; }
+    #head_in .navi .sp_navi #sp_navi_btn {
+      padding: 0 5px 0 0; } }
 /* main_img--------------------------------------------------------------------TOPページここから----------*/
 #main_img {
   background: url(../images/top/top.png) center center;
@@ -202,7 +181,7 @@ li {
       #plofile .plofile_bg {
         margin-left: 20%; } }
   #plofile .plofile_container {
-    width: 800px;
+    width: 1000px;
     position: absolute;
     top: -20px;
     left: 0;
@@ -214,44 +193,61 @@ li {
       margin: 0;
       font-size: 45px;
       color: #555;
-      width: 800px;
+      width: 1000px;
       text-align: center;
-      left: 5px; }
+      left: -90px;
+      top: -5px; }
     #plofile .plofile_container .pc_plofile_img {
       width: 300px; }
     #plofile .plofile_container .plofile_text {
       position: absolute;
       font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
-      font-size: 1.4rem;
-      padding: 20px 30px;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      padding: 30px 60px;
       background: white;
-      width: 500px;
+      width: 670px;
       top: 50px;
       right: 0; }
       #plofile .plofile_container .plofile_text span {
         font-size: 1.0rem; }
 
-@media (max-width: 550px) {
-  #plofile .plofile_bg {
-    margin-top: 80px;
-    margin-left: 15%; }
+@media (max-width: 960px) {
   #plofile .plofile_container {
-    max-width: 550px;
-    width: 100%; }
+    width: 700px; }
     #plofile .plofile_container h1 {
-      font-size: 40px;
-      max-width: 550px;
-      width: 100%;
-      left: 50px;
-      z-index: 30; }
-    #plofile .plofile_container .pc_plofile_img {
-      position: absolute;
-      left: -100px; }
+      width: 700px;
+      left: 60px; }
     #plofile .plofile_container .plofile_text {
-      box-sizing: border-box;
-      font-size: 1.2rem;
-      padding: 20px 20px;
-      width: 70%; } }
+      padding: 20px 30px;
+      width: 430px; } }
+@media (max-width: 550px) {
+  #plofile {
+    height: 550px; }
+    #plofile .plofile_bg {
+      margin-top: 80px;
+      margin-left: 15%; }
+    #plofile .plofile_container {
+      max-width: 550px;
+      width: 100%; }
+      #plofile .plofile_container h1 {
+        font-size: 40px;
+        max-width: 550px;
+        width: 100%;
+        left: 50px;
+        z-index: 30; }
+      #plofile .plofile_container .pc_plofile_img {
+        position: absolute;
+        left: -100px; }
+      #plofile .plofile_container .plofile_text {
+        box-sizing: border-box;
+        font-size: 1.4rem;
+        line-height: 1.8;
+        padding: 20px 20px;
+        width: 70%; } }
+@media (max-width: 320px) {
+  #plofile {
+    height: 600px; } }
 /* service ----------------------------------------------------------------------------------*/
 #service {
   padding: 0;
@@ -261,7 +257,7 @@ li {
     background: #f9cf00;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
     opacity: 0.7;
-    height: 300px;
+    height: 350px;
     margin-top: 130px;
     left: 0;
     bottom: 0;
@@ -273,7 +269,7 @@ li {
       #service .service_bg {
         margin-right: 20%; } }
   #service .service_container {
-    width: 960px;
+    width: 1200px;
     position: absolute;
     top: -30px;
     left: 0;
@@ -295,10 +291,11 @@ li {
     #service .service_container .service_text {
       position: absolute;
       font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
+      line-height: 1.8;
       padding: 20px 30px 60px 30px;
       background: white;
-      width: 540px;
+      width: 800px;
       top: 60px;
       left: 0; }
       #service .service_container .service_text .more {
@@ -306,7 +303,8 @@ li {
         width: 180px;
         border: 1px solid #555;
         text-align: center;
-        line-height: 2.0; }
+        line-height: 2.0;
+        margin-left: auto; }
         #service .service_container .service_text .more:hover {
           background: #f2f2f2; }
         #service .service_container .service_text .more a {
@@ -314,32 +312,107 @@ li {
           color: #555; }
     #service .service_container .service_contents {
       position: absolute;
-      top: 260px;
-      left: -40px;
+      top: 270px;
+      left: 60px;
       display: -webkit-flex;
       display: flex;
-      width: 1050px;
+      width: 1100px;
       justify-content: space-between; }
       #service .service_container .service_contents .content {
+        width: 170px;
         position: relative; }
         #service .service_container .service_contents .content img {
           width: 170px; }
-        #service .service_container .service_contents .content p {
-          position: absolute;
-          font-size: 1.6rem;
-          color: #fff;
-          top: 55px;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          text-align: center; }
-        #service .service_container .service_contents .content .line {
-          top: 65px; }
+        #service .service_container .service_contents .content a {
+          display: block; }
+          #service .service_container .service_contents .content a span {
+            position: absolute;
+            font-size: 1.6rem;
+            color: #fff;
+            top: 55px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center; }
+          #service .service_container .service_contents .content a .line {
+            top: 68px; }
 
+@media (max-width: 1024px) {
+  #service .service_container {
+    max-width: 1024px;
+    width: 100%; }
+    #service .service_container .service_text {
+      width: 700px; }
+    #service .service_container .service_contents {
+      top: 270px;
+      width: 900px; }
+      #service .service_container .service_contents .content {
+        width: 140px; }
+        #service .service_container .service_contents .content img {
+          width: 140px; }
+        #service .service_container .service_contents .content a span {
+          font-size: 1.5rem;
+          top: 45px; }
+        #service .service_container .service_contents .content a .line {
+          top: 60px; } }
+@media (max-width: 960px) {
+  #service .service_container {
+    max-width: 960px;
+    width: 100%; }
+    #service .service_container .service_contents {
+      top: 270px;
+      width: 800px; }
+      #service .service_container .service_contents .content {
+        width: 130px; }
+        #service .service_container .service_contents .content img {
+          width: 130px; }
+        #service .service_container .service_contents .content a span {
+          font-size: 1.4rem;
+          top: 45px; }
+        #service .service_container .service_contents .content a .line {
+          top: 60px; } }
+@media (max-width: 768px) {
+  #service .service_bg {
+    height: 370px;
+    margin-top: 80px;
+    margin-right: 30px; }
+  #service .service_container {
+    max-width: 768px;
+    width: 100%; }
+    #service .service_container h1 {
+      font-size: 40px;
+      width: 100%;
+      text-align: left;
+      left: 130px; }
+    #service .service_container .service_text {
+      box-sizing: border-box;
+      font-size: 1.5rem;
+      padding: 20px 20px 60px 20px;
+      width: 70%;
+      top: 50px; }
+    #service .service_container .service_contents {
+      top: 280px;
+      left: 0;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap; }
+      #service .service_container .service_contents .content {
+        margin: 5px;
+        width: 200px; }
+        #service .service_container .service_contents .content img {
+          width: 200px;
+          height: 80px;
+          object-fit: cover;
+          padding-top: 10px;
+          padding: 0; }
+        #service .service_container .service_contents .content a span {
+          font-size: 1.5rem;
+          top: 20px; }
+        #service .service_container .service_contents .content a .line {
+          top: 30px; } }
 @media (max-width: 550px) {
   #service .service_bg {
     height: 450px;
-    margin-top: 80px;
     margin-right: 0; }
   #service .service_container {
     max-width: 550px;
@@ -356,14 +429,15 @@ li {
       object-position: 100% 100%; }
     #service .service_container .service_text {
       box-sizing: border-box;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       padding: 20px 20px 60px 20px;
       width: 70%;
       top: 50px; }
       #service .service_container .service_text .more:hover {
+        margin-left: 0;
         background: none; }
     #service .service_container .service_contents {
-      top: 320px;
+      top: 380px;
       left: 0;
       width: 100%;
       justify-content: center;
@@ -371,18 +445,41 @@ li {
       #service .service_container .service_contents .content {
         margin: 0 3px; }
         #service .service_container .service_contents .content img {
-          width: 150px;
+          width: 200px;
           height: 60px;
           object-fit: cover;
           padding-top: 10px;
           padding: 0; }
-        #service .service_container .service_contents .content p {
-          top: -7px; }
-        #service .service_container .service_contents .content .line {
-          top: 2px; } }
+        #service .service_container .service_contents .content a span {
+          font-size: 1.5rem;
+          top: 10px; }
+        #service .service_container .service_contents .content a .line {
+          top: 20px; } }
+@media (max-width: 375px) {
+  #service .service_bg {
+    height: 450px; }
+  #service .service_container {
+    max-width: 375px; }
+    #service .service_container .service_text {
+      width: 80%; }
+      #service .service_container .service_text .more {
+        margin-left: 0; }
+    #service .service_container .service_contents .content {
+      width: 150px; }
+      #service .service_container .service_contents .content img {
+        width: 150px; } }
+@media (max-width: 320px) {
+  #service {
+    height: 600px; }
+    #service .service_bg {
+      height: 450px; }
+    #service .service_container {
+      max-width: 320px; }
+      #service .service_container .service_contents {
+        top: 430px; } }
 /* works -------------------------------------------------------------------------------*/
 #works {
-  width: 960px;
+  width: 1500px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px; }
@@ -403,6 +500,10 @@ li {
       text-decoration: none;
       color: #555; }
 
+@media (max-width: 1440px) {
+  #works {
+    max-width: 1440px;
+    width: 100%; } }
 @media (max-width: 550px) {
   #works {
     max-width: 550px;
@@ -515,23 +616,29 @@ footer {
       display: inline;
       margin: auto;
       font-family: 'Mina', sans-serif;
-      padding-left: 10px;
-      padding-right: 10px;
-      font-size: 2.0rem;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 2.5rem;
       font-weight: bold; }
       #inner_link ul li a {
         color: #f19f4d; }
         #inner_link ul li a:hover {
           color: #f9cf00; }
 
+@media (max-width: 1024px) {
+  #inner_link ul {
+    padding: 10px; }
+    #inner_link ul li {
+      font-size: 2.0rem;
+      line-height: 2.5; }
+      #inner_link ul li a:hover {
+        color: #f19f4d; } }
 @media (max-width: 550px) {
   #inner_link ul {
     padding: 10px; }
     #inner_link ul li {
       font-size: 1.8rem;
-      line-height: 2.0; }
-      #inner_link ul li a:hover {
-        color: #f19f4d; } }
+      line-height: 2.0; } }
 #sr_container {
   /* ここからbox1 --------------------------*/
   /* ここからbox2 ------------------------------------*/ }
@@ -554,8 +661,11 @@ footer {
       @media (max-width: 1200px) {
         #sr_container .srbox1 .srbox1_bg {
           margin-left: 20%; } }
+      @media (max-width: 1024px) {
+        #sr_container .srbox1 .srbox1_bg {
+          margin-left: 10%; } }
     #sr_container .srbox1 .srbox1_container {
-      width: 960px;
+      width: 1200px;
       position: absolute;
       top: -20px;
       left: 0;
@@ -570,7 +680,7 @@ footer {
         color: #555;
         width: 960px;
         text-align: center;
-        right: 20px;
+        left: -25px;
         top: -10px; }
       #sr_container .srbox1 .srbox1_container .chara {
         left: 90px; }
@@ -583,7 +693,7 @@ footer {
         position: absolute;
         padding: 20px 0 0 30px;
         background: white;
-        width: 650px;
+        width: 900px;
         top: 50px;
         right: 0;
         font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
@@ -602,14 +712,13 @@ footer {
           margin: 0 0 0 20px;
           padding: 0; }
         #sr_container .srbox1 .srbox1_container .srbox1_text .srbox1_btn {
-          display: inline-flex;
           float: right; }
           #sr_container .srbox1 .srbox1_container .srbox1_text .srbox1_btn .btn {
-            font-size: 1.6rem;
-            width: 200px;
+            font-size: 2.0rem;
+            width: 300px;
             border: 1px solid #555;
             text-align: center;
-            line-height: 2.0;
+            line-height: 2.5;
             margin-left: auto; }
             #sr_container .srbox1 .srbox1_container .srbox1_text .srbox1_btn .btn:hover {
               background: #f2f2f2; }
@@ -635,8 +744,11 @@ footer {
       @media (max-width: 1200px) {
         #sr_container .srbox2 .srbox2_bg {
           margin-right: 20%; } }
+      @media (max-width: 1024px) {
+        #sr_container .srbox2 .srbox2_bg {
+          margin-right: 10%; } }
     #sr_container .srbox2 .srbox2_container {
-      width: 960px;
+      width: 1200px;
       position: absolute;
       top: -20px;
       left: 0;
@@ -663,7 +775,7 @@ footer {
         position: absolute;
         padding: 20px 30px 0 0;
         background: white;
-        width: 650px;
+        width: 900px;
         top: 50px;
         letter-spacing: 0;
         font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
@@ -684,14 +796,13 @@ footer {
           margin: 0 0 0 50px;
           padding: 0; }
         #sr_container .srbox2 .srbox2_container .srbox2_text .srbox2_btn {
-          display: inline-flex;
           float: left; }
           #sr_container .srbox2 .srbox2_container .srbox2_text .srbox2_btn .btn {
-            font-size: 1.6rem;
-            width: 200px;
+            font-size: 2.0rem;
+            width: 300px;
             border: 1px solid #555;
             text-align: center;
-            line-height: 2.0;
+            line-height: 2.5;
             margin-left: auto; }
             #sr_container .srbox2 .srbox2_container .srbox2_text .srbox2_btn .btn:hover {
               background: #f2f2f2; }
@@ -699,6 +810,46 @@ footer {
               text-decoration: none;
               color: #555; }
 
+@media (max-width: 1024px) {
+  #sr_container {
+    max-width: 1024px;
+    width: 100%;
+    /* ここからbox1 --------------------------*/
+    /* ここからbox2 ------------------------------------*/ }
+    #sr_container .srbox1 {
+      height: 500px; }
+      #sr_container .srbox1 .srbox1_container {
+        width: 100%; }
+        #sr_container .srbox1 .srbox1_container .srbox1_title {
+          width: 100%;
+          left: -40px; }
+        #sr_container .srbox1 .srbox1_container .chara {
+          left: 60px; }
+        #sr_container .srbox1 .srbox1_container .web {
+          left: 25px; }
+        #sr_container .srbox1 .srbox1_container .srbox1_text {
+          width: 80%; }
+          #sr_container .srbox1 .srbox1_container .srbox1_text h2 {
+            font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+            font-size: 2.0rem;
+            color: #555; }
+          #sr_container .srbox1 .srbox1_container .srbox1_text .sr_discr {
+            margin-bottom: 0;
+            margin-right: 30px; }
+          #sr_container .srbox1 .srbox1_container .srbox1_text p {
+            margin-bottom: 0; }
+          #sr_container .srbox1 .srbox1_container .srbox1_text ul {
+            margin: 0 0 0 20px;
+            padding: 0; }
+    #sr_container .srbox2 .srbox2_container {
+      width: 100%; }
+      #sr_container .srbox2 .srbox2_container .srbox2_title {
+        width: 100%;
+        right: 80px; }
+      #sr_container .srbox2 .srbox2_container .mannga {
+        right: -18px; }
+      #sr_container .srbox2 .srbox2_container .srbox2_text {
+        width: 80%; } }
 @media (max-width: 550px) {
   #sr_container {
     max-width: 550px;
@@ -706,7 +857,7 @@ footer {
     /* ここからbox1 ----------------------------------------*/
     /* ここからbox2 ------------------------------------------*/ }
     #sr_container .srbox1 {
-      height: 600px;
+      height: 800px;
       margin-bottom: 100px; }
       #sr_container .srbox1 .srbox1_bg {
         margin-top: 100px;
@@ -730,7 +881,6 @@ footer {
         #sr_container .srbox1 .srbox1_container .srbox1_text {
           padding: 10px 0 0 0;
           width: 85%;
-          font-size: 1.3rem;
           line-height: 1.8; }
           #sr_container .srbox1 .srbox1_container .srbox1_text h2 {
             font-size: 1.6rem;
@@ -746,11 +896,11 @@ footer {
           #sr_container .srbox1 .srbox1_container .srbox1_text .srbox1_btn {
             width: 100%; }
             #sr_container .srbox1 .srbox1_container .srbox1_text .srbox1_btn .btn {
-              flex: 1; }
+              width: 100%; }
               #sr_container .srbox1 .srbox1_container .srbox1_text .srbox1_btn .btn:hover {
                 background: white; }
     #sr_container .srbox2 {
-      height: 600px;
+      height: 800px;
       margin-bottom: 100px; }
       #sr_container .srbox2 .srbox2_bg {
         margin-top: 50px;
@@ -768,7 +918,6 @@ footer {
         #sr_container .srbox2 .srbox2_container .srbox2_text {
           padding: 10px 0 0 0;
           width: 85%;
-          font-size: 1.3rem;
           line-height: 1.8; }
           #sr_container .srbox2 .srbox2_container .srbox2_text h2 {
             font-size: 1.6rem;
@@ -783,7 +932,7 @@ footer {
           #sr_container .srbox2 .srbox2_container .srbox2_text .srbox2_btn {
             width: 100%; }
             #sr_container .srbox2 .srbox2_container .srbox2_text .srbox2_btn .btn {
-              flex: 1; }
+              width: 100%; }
               #sr_container .srbox2 .srbox2_container .srbox2_text .srbox2_btn .btn:hover {
                 background: white; } }
 /* pagetop ----------------------------------------------------------------------------*/
@@ -794,16 +943,16 @@ footer {
   #pagetop img {
     width: 30px; }
 
-/* flow
--------------------------------------------------------------------------------flowページここから----*/
+/* movie
+---------------------------------------------------------------------------------------------movieページここから----*/
 /* main_imag -----------------------------------------------------------*/
-#fl_main_img {
-  background: url(../images/flow/flow.png) center center;
+#mo_main_img {
+  background: url(../images/service/movie_top.png) center center;
   background-size: cover;
   padding-top: 70px;
   padding-bottom: 70px;
   z-index: 30; }
-  #fl_main_img .main_title {
+  #mo_main_img .main_title {
     margin-left: auto;
     margin-right: auto;
     background: rgba(67, 129, 204, 0.7);
@@ -812,8 +961,9 @@ footer {
     border-radius: 400px 250px 500px 350px/360px 560px 450px 230px;
     width: 500px;
     height: 150px;
-    z-index: 40; }
-    #fl_main_img .main_title p {
+    z-index: 40;
+    font-family: 'Mina', sans-serif; }
+    #mo_main_img .main_title p {
       font-size: 60px;
       color: white;
       text-align: center;
@@ -821,214 +971,663 @@ footer {
       padding-top: 40px; }
 
 @media (max-width: 550px) {
-  #fl_main_img {
-    background: url(../images/flow_sp/flow.png) center center; }
-    #fl_main_img .main_title {
+  #mo_main_img {
+    background: url(../images/service_sp/movie_top.png) center center; }
+    #mo_main_img .main_title {
       width: 250px;
       height: 100px;
       z-index: 40; }
-      #fl_main_img .main_title p {
+      #mo_main_img .main_title p {
         font-size: 45px;
         padding-top: 25px; } }
-/* content ----------------------------------------------------------------*/
-#fl_container {
+/* ページ内リンク---------------------------------------------------*/
+#s_inlink {
   width: 960px;
   margin: auto;
-  /* ここからbox1 ---------------------------*/
-  /* box2ここから-----------------------------------*/ }
-  #fl_container .flbox1 {
-    padding: 0;
-    position: relative;
-    height: 400px;
-    margin-bottom: 60px; }
-    #fl_container .flbox1 .flbox1_bg {
-      background: #f19f4d;
-      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-      opacity: 0.7;
-      height: 280px;
-      width: 850px;
-      margin-top: 130px;
-      bottom: 0;
-      margin-left: 50px; }
-    #fl_container .flbox1 .flbox1_container {
-      width: 960px;
-      position: absolute;
-      top: -20px;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto; }
-      #fl_container .flbox1 .flbox1_container .flbox1_title {
-        position: absolute;
-        margin: 0;
-        font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
-        font-size: 45px;
-        color: #555;
-        width: 960px;
-        text-align: center;
-        font-weight: lighter;
-        left: 25px;
-        top: -10px; }
-      #fl_container .flbox1 .flbox1_container .flbox1_img {
-        width: 380px; }
-      #fl_container .flbox1 .flbox1_container .flbox1_text {
+  text-align: center;
+  padding: 20px 0; }
+  #s_inlink .pc_inlink {
+    padding: 0; }
+    #s_inlink .pc_inlink li {
+      display: inline;
+      padding: 10px 40px;
+      font-size: 2.0rem;
+      line-height: 2.5rem;
+      border-right: 1px solid #555; }
+      #s_inlink .pc_inlink li:last-child {
+        border: none; }
+      #s_inlink .pc_inlink li a {
+        color: #555; }
+  #s_inlink .sp_inlink {
+    display: none; }
+
+@media (max-width: 768px) {
+  #s_inlink {
+    max-width: 700px;
+    width: 100%; }
+    #s_inlink .pc_inlink li {
+      padding: 10px 20px;
+      font-size: 2.0rem; } }
+@media (max-width: 550px) {
+  #s_inlink {
+    width: 100%; }
+    #s_inlink .pc_inlink {
+      display: none; }
+    #s_inlink .sp_inlink {
+      display: block;
+      display: -webkit-flex;
+      display: flex;
+      padding: 0; }
+      #s_inlink .sp_inlink li {
+        -webkit-flex: 1;
+        flex: 1;
+        padding: 10px 10px;
+        font-size: 2.0rem;
+        line-height: 2.5rem; }
+        #s_inlink .sp_inlink li a {
+          color: #555; }
+      #s_inlink .sp_inlink .line {
+        border-right: 1px solid #555;
+        border-bottom: 1px solid #555; }
+      #s_inlink .sp_inlink .line_child {
+        border-bottom: 1px solid #555; } }
+/* 制作の特徴 --------------------------------------------------------*/
+#s_content {
+  display: -webkit-flex;
+  display: flex;
+  width: 1200px;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  #s_content .menu {
+    width: 60%;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px 30px;
+    margin: 5px;
+    font-size: 1.5rem;
+    line-height: 1.8; }
+    #s_content .menu p {
+      margin: 0; }
+  #s_content .for {
+    width: 40%;
+    padding: 20px;
+    margin: 5px;
+    background: rgba(255, 255, 255, 0.7); }
+    #s_content .for p {
+      font-size: 2.5rem;
+      color: #f19f4d;
+      border-bottom: 2px solid #f19f4d;
+      text-align: center;
+      margin: 0; }
+    #s_content .for .for_list {
+      width: 85%;
+      margin: auto;
+      padding-top: 10px; }
+      #s_content .for .for_list .for_li {
         display: -webkit-flex;
-        display: flex;
-        justify-content: space-between;
-        box-sizing: border-box;
-        position: absolute;
-        background: white;
-        width: 800px;
-        padding: 20px;
-        top: 50px;
-        right: 0; }
-        #fl_container .flbox1 .flbox1_container .flbox1_text .step {
-          width: 100px;
-          margin-right: 10px; }
-          #fl_container .flbox1 .flbox1_container .flbox1_text .step:last-child {
-            margin-right: 0; }
-          #fl_container .flbox1 .flbox1_container .flbox1_text .step h3 {
-            text-align: center; }
-        #fl_container .flbox1 .flbox1_container .flbox1_text .next_pc {
-          margin-top: 100px;
-          margin-left: 10px;
-          margin-right: 10px; }
-        #fl_container .flbox1 .flbox1_container .flbox1_text .next_sp {
-          display: none; }
-  #fl_container .flbox2 {
-    padding: 0;
-    position: relative;
-    height: 1200px;
-    margin-bottom: 100px;
-    position: relative; }
-    #fl_container .flbox2 .flbox2_bg {
-      position: absolute;
-      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-      opacity: 0.7; }
-    #fl_container .flbox2 .flbox2_title {
-      position: absolute;
-      margin: 0;
-      font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
-      font-size: 45px;
-      color: #555;
-      width: 960px;
-      text-align: left;
-      font-weight: lighter;
-      left: 25px;
-      top: -40px; }
-    #fl_container .flbox2 .comment {
-      position: absolute;
-      font-size: 1.8rem;
-      margin-left: 25px; }
-    #fl_container .flbox2 .tkcho_box {
-      position: absolute;
-      width: 900px;
-      left: 20px;
-      right: 0;
-      top: 70px; }
-      #fl_container .flbox2 .tkcho_box .tkcho {
-        background: white;
-        margin-bottom: 20px;
-        font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
-        padding: 10px; }
-        #fl_container .flbox2 .tkcho_box .tkcho h4 {
+        display: flex; }
+        #s_content .for .for_list .for_li .txt {
+          color: #f19f4d;
           font-size: 2.0rem;
-          width: 900px;
-          text-align: center;
-          margin-top: 0;
-          margin-bottom: 20px; }
-        #fl_container .flbox2 .tkcho_box .tkcho p {
-          font-size: 1.4rem;
-          line-height: 1.8; }
-          #fl_container .flbox2 .tkcho_box .tkcho p span {
+          line-height: 1.2;
+          padding: 10px 0; }
+  #s_content .menu_chara {
+    width: 40%; }
+  #s_content .for_chara {
+    width: 60%; }
+    #s_content .for_chara .for_ul {
+      padding: 0; }
+
+@media (max-width: 1024px) {
+  #s_content {
+    width: 95%; }
+    #s_content .menu {
+      width: 50%; }
+    #s_content .for {
+      width: 50%;
+      padding: 20px 5px; } }
+@media (max-width: 550px) {
+  #s_content {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 90%; }
+    #s_content .menu {
+      box-sizing: border-box;
+      margin: 5px;
+      width: 100%;
+      font-size: 1.5rem;
+      line-height: 1.6; }
+    #s_content .for {
+      box-sizing: border-box;
+      margin: 5px;
+      width: 100%; }
+      #s_content .for p {
+        font-size: 2.0rem;
+        line-height: 1.8; }
+      #s_content .for .for_list {
+        width: 90%; }
+        #s_content .for .for_list .for_li .txt {
+          color: #f19f4d;
+          font-size: 1.6rem;
+          line-height: 1.2; } }
+/* 制作の流れ　----------------------------------------------------------*/
+#sr_flow {
+  background: rgba(255, 226, 85, 0.7);
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  #sr_flow h1 {
+    color: #555;
+    font-weight: lighter;
+    font-size: 3.5rem;
+    padding-bottom: 20px;
+    text-align: center; }
+  #sr_flow .flbox1 {
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+    margin: auto; }
+    #sr_flow .flbox1 .step {
+      box-sizing: border-box;
+      width: 200px;
+      height: auto;
+      background: white;
+      -moz-border-radius: 5%;
+      -webkit-border-radius: 5%;
+      border-radius: 5%;
+      text-align: center; }
+      #sr_flow .flbox1 .step img {
+        margin: 10px; }
+      #sr_flow .flbox1 .step p {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 1.2rem;
+        line-height: 1.4;
+        text-align: left; }
+    #sr_flow .flbox1 .next_pc {
+      padding-top: 100px; }
+    #sr_flow .flbox1 .next_sp {
+      display: none; }
+  #sr_flow .flbox2 {
+    width: 960px;
+    margin: auto;
+    padding: 20px; }
+    #sr_flow .flbox2 p {
+      font-size: 1.5rem;
+      line-height: 1.8; }
+      #sr_flow .flbox2 p span {
+        color: #4484ce; }
+
+@media (max-width: 1024px) {
+  #sr_flow .flbox1 {
+    max-width: 1024px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box; }
+    #sr_flow .flbox1 .step {
+      padding-left: 5px;
+      padding-right: 5px; }
+    #sr_flow .flbox1 .next_pc {
+      padding: 100px 5px 0 5px; }
+  #sr_flow .flbox2 {
+    width: 80%; } }
+@media (max-width: 550px) {
+  #sr_flow .flbox1 {
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+    #sr_flow .flbox1 .step {
+      display: -webkit-flex;
+      display: flex;
+      width: 100%; }
+      #sr_flow .flbox1 .step h3 {
+        text-align: left;
+        padding-left: 15px; }
+      #sr_flow .flbox1 .step p {
+        font-size: 1.3rem;
+        line-height: 1.4; }
+    #sr_flow .flbox1 .next_pc {
+      display: none; }
+    #sr_flow .flbox1 .next_sp {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 5px 0; } }
+/* 制作料金 ----------------------------------------------------------------*/
+#s_fee {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  #s_fee h1 {
+    color: #555;
+    font-weight: lighter;
+    font-size: 3.5rem;
+    padding-bottom: 20px;
+    text-align: center; }
+  #s_fee .fee_content {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: auto; }
+    #s_fee .fee_content .fee_box {
+      box-sizing: border-box;
+      width: 450px;
+      margin: 0 10px;
+      background: rgba(128, 171, 220, 0.8);
+      -moz-border-radius: 10% / 5%;
+      -webkit-border-radius: 10% 5%;
+      border-radius: 10% / 5%;
+      padding: 10px; }
+      #s_fee .fee_content .fee_box h5 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: white;
+        margin: 32px 0 0 0;
+        border-bottom: 1px solid white; }
+      #s_fee .fee_content .fee_box .topfee {
+        text-align: center;
+        font-size: 2.5rem;
+        color: white;
+        margin: 0;
+        border-bottom: 1px solid white; }
+        #s_fee .fee_content .fee_box .topfee span {
+          font-size: 1.8rem;
+          background: #f19f4d;
+          padding: 5px;
+          -moz-border-radius: 5%;
+          -webkit-border-radius: 5%;
+          border-radius: 5%;
+          margin-left: 150px; }
+      #s_fee .fee_content .fee_box .fee {
+        text-align: center;
+        font-size: 4.0rem;
+        color: white; }
+        #s_fee .fee_content .fee_box .fee span {
+          font-size: 3.0rem; }
+      #s_fee .fee_content .fee_box .txt {
+        font-size: 1.5rem;
+        line-height: 1.8;
+        color: white;
+        padding: 10px;
+        margin: 10px 10px 0 10px;
+        border-top: 1px solid white; }
+      #s_fee .fee_content .fee_box table {
+        width: 90%;
+        margin: 10px auto;
+        border-collapse: collapse;
+        border: 1px solid #4484ce;
+        background: rgba(255, 255, 255, 0.9); }
+        #s_fee .fee_content .fee_box table tr {
+          border: 1px solid #4484ce; }
+          #s_fee .fee_content .fee_box table tr th {
+            border: 1px solid #4484ce;
+            font-size: 1.5rem;
             color: #4484ce;
-            font-weight: bold; }
+            font-weight: lighter;
+            line-height: 1.0;
+            padding: 10px 0; }
+    #s_fee .fee_content .fb_m {
+      -webkit-flex: 1;
+      flex: 1;
+      -moz-border-radius: 10%;
+      -webkit-border-radius: 10%;
+      border-radius: 10%; }
+      #s_fee .fee_content .fb_m h5 {
+        margin: 20px 0 0 0;
+        padding-bottom: 20px; }
+      #s_fee .fee_content .fb_m .txt {
+        border-top: none; }
+      #s_fee .fee_content .fb_m .w_txt {
+        border-top: 1px solid white; }
+      #s_fee .fee_content .fb_m table {
+        margin-bottom: 20px; }
+        #s_fee .fee_content .fb_m table tr th {
+          font-size: 2.0rem;
+          line-height: 1.2;
+          padding: 10px 0; }
+  #s_fee .oh_menu {
+    margin: 20px 0; }
+    #s_fee .oh_menu p {
+      width: 1200px;
+      font-size: 1.5rem;
+      line-height: 1.8;
+      margin: 10px auto;
+      padding: 0 10px;
+      background: #f2f2f2;
+      text-align: center; }
+      #s_fee .oh_menu p a {
+        font-family: 'Mina', sans-serif;
+        font-size: 2.0rem;
+        color: #f19f4d;
+        padding: 0 10px; }
+    #s_fee .oh_menu .oh_plus {
+      width: 1000px;
+      margin: auto;
+      text-align: left;
+      font-size: 1.6rem;
+      color: #4484ce; }
+
+@media (max-width: 1024px) {
+  #s_fee .fee_content {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 90%; }
+    #s_fee .fee_content .fee_box {
+      width: 100%;
+      margin: 10px auto;
+      -moz-border-radius: 5% / 10%;
+      -webkit-border-radius: 5% 10%;
+      border-radius: 5% / 10%; }
+      #s_fee .fee_content .fee_box .topfee span {
+        margin-left: 0; }
+  #s_fee .oh_menu p {
+    width: 90%; }
+  #s_fee .oh_menu .oh_plus {
+    width: 90%; } }
+@media (max-width: 550px) {
+  #s_fee .fee_content .fee_box {
+    -moz-border-radius: 10% / 5%;
+    -webkit-border-radius: 10% 5%;
+    border-radius: 10% / 5%; }
+  #s_fee .fee_content .fb_m {
+    -moz-border-radius: 10% / 5%;
+    -webkit-border-radius: 10% 5%;
+    border-radius: 10% / 5%; }
+    #s_fee .fee_content .fb_m table {
+      width: 95%; }
+      #s_fee .fee_content .fb_m table tr th {
+        font-size: 1.6rem; } }
+/* 制作実績　----------------------------------------------------------*/
+#s_work {
+  background: rgba(247, 198, 150, 0.7);
+  padding-top: 30px;
+  padding-bottom: 80px;
+  text-align: center; }
+  #s_work h1 {
+    color: #555;
+    font-weight: lighter;
+    font-size: 3.5rem;
+    padding-bottom: 20px;
+    text-align: center; }
+  #s_work .works {
+    width: 80%;
+    margin: auto;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    #s_work .works img {
+      margin: 5px;
+      width: 300px;
+      height: 150px;
+      object-fit: cover;
+      object-position: 50% 50%; }
+
+@media (max-width: 1024px) {
+  #s_work .works {
+    width: 90%; }
+    #s_work .works img {
+      width: 200px; } }
+@media (max-width: 550px) {
+  #s_work .works {
+    width: 100%; }
+    #s_work .works img {
+      width: 150px;
+      margin: 5px; } }
+/* pamph
+------------------------------------------------------------------------------pamphページここから------*/
+#pm_main_img {
+  background: url(../images/service/pamph_top.png) center center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  z-index: 30; }
+  #pm_main_img .main_title {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(67, 129, 204, 0.7);
+    -moz-border-radius: 360px 300px 280px 360px/300px 250px 450px 280px;
+    -webkit-border-radius: 360px;
+    border-radius: 360px 300px 280px 360px/300px 250px 450px 280px;
+    width: 500px;
+    height: 200px;
+    z-index: 40;
+    font-family: 'Mina', sans-serif; }
+    #pm_main_img .main_title p {
+      font-size: 60px;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding-top: 20px; }
 
 @media (max-width: 550px) {
-  #fl_container {
-    max-width: 550px;
+  #pm_main_img {
+    background: url(../images/service_sp/pamph_top.png) center center; }
+    #pm_main_img .main_title {
+      width: 300px;
+      height: 150px;
+      z-index: 40; }
+      #pm_main_img .main_title p {
+        font-size: 45px;
+        padding-top: 15px; } }
+/* 制作料金 ----------------------------------------------------------------*/
+#p_fee {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  #p_fee h1 {
+    color: #555;
+    font-weight: lighter;
+    font-size: 3.5rem;
+    padding-bottom: 20px;
+    text-align: center; }
+  #p_fee .fee_content {
+    width: 1200px;
+    margin: auto;
+    background: rgba(128, 171, 220, 0.8);
+    -moz-border-radius: 5% / 10%;
+    -webkit-border-radius: 5% 10%;
+    border-radius: 5% / 10%;
+    padding: 10px; }
+    #p_fee .fee_content .txt {
+      font-size: 1.6rem;
+      line-height: 1.8;
+      color: white;
+      padding: 10px;
+      margin: 10px 10px 0 10px;
+      text-align: center; }
+    #p_fee .fee_content table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      border: 1px solid #4484ce;
+      background: rgba(255, 255, 255, 0.9); }
+      #p_fee .fee_content table tr {
+        border: 1px solid #4484ce; }
+        #p_fee .fee_content table tr th {
+          border: 1px solid #4484ce;
+          font-size: 2.0rem;
+          color: #4484ce;
+          font-weight: lighter;
+          line-height: 1.2;
+          padding: 10px; }
+  #p_fee .oh_menu {
     width: 100%;
-    /* ここからbox1 -------------------------------*/
-    /* box2ここから--------------------------------------*/ }
-    #fl_container .flbox1 {
-      height: 800px;
-      margin-bottom: 0; }
-      #fl_container .flbox1 .flbox1_bg {
-        height: 600px;
-        width: 90%;
-        margin-top: 80px;
-        margin-left: 5%; }
-      #fl_container .flbox1 .flbox1_container {
-        max-width: 550px;
-        width: 100%; }
-        #fl_container .flbox1 .flbox1_container .flbox1_title {
-          font-size: 30px;
-          max-width: 550px;
-          width: 100%;
-          left: 0;
-          top: -40px; }
-        #fl_container .flbox1 .flbox1_container .flbox1_img {
-          width: 200px; }
-        #fl_container .flbox1 .flbox1_container .flbox1_text {
-          -webkit-flex-direction: column;
-          flex-direction: column;
-          width: 85%;
-          padding: 10px;
-          top: 40px; }
-          #fl_container .flbox1 .flbox1_container .flbox1_text img {
-            width: 60px;
-            margin-top: 15px; }
-          #fl_container .flbox1 .flbox1_container .flbox1_text .step {
-            display: -webkit-flex;
-            display: flex;
-            width: 100%;
-            margin-left: 5px;
-            margin-right: 5px; }
-            #fl_container .flbox1 .flbox1_container .flbox1_text .step h3 {
-              text-align: left; }
-          #fl_container .flbox1 .flbox1_container .flbox1_text .text {
-            margin-left: 10px;
-            margin-right: 10px; }
-          #fl_container .flbox1 .flbox1_container .flbox1_text .next_pc {
-            display: none; }
-          #fl_container .flbox1 .flbox1_container .flbox1_text .next_sp {
-            display: block;
-            text-align: center; }
-            #fl_container .flbox1 .flbox1_container .flbox1_text .next_sp img {
-              width: auto;
-              height: 20px;
-              margin: 5px; }
-    #fl_container .flbox2 {
-      height: 2100px;
-      margin-bottom: 100px; }
-      #fl_container .flbox2 .flbox2_bg img {
-        max-width: 550px;
-        width: 100%;
-        height: 558px; }
-      #fl_container .flbox2 .flbox2_title {
-        font-size: 30px;
-        max-width: 550px;
-        width: 100%;
-        text-align: center;
-        left: 0;
-        top: -50px; }
-      #fl_container .flbox2 .comment {
-        font-size: 1.3rem;
-        margin-left: 0; }
-        #fl_container .flbox2 .comment p {
-          width: 320px;
-          text-align: center; }
-      #fl_container .flbox2 .tkcho_box {
-        width: 90%;
-        left: 5%;
-        top: 50px; }
-        #fl_container .flbox2 .tkcho_box .tkcho h4 {
-          font-size: 1.5rem;
-          width: 100%;
-          margin-top: 10px; }
-        #fl_container .flbox2 .tkcho_box .tkcho p {
-          font-size: 1.3rem;
-          line-height: 1.8; } }
+    margin: auto;
+    text-align: center;
+    margin: 20px 0; }
+    #p_fee .oh_menu p {
+      font-size: 1.5rem;
+      line-height: 1.8; }
+      #p_fee .oh_menu p a {
+        font-family: 'Mina', sans-serif;
+        font-size: 2.0rem;
+        color: #f19f4d;
+        padding: 0 10px; }
+
+@media (max-width: 1024px) {
+  #p_fee .fee_content {
+    width: 90%; } }
+@media (max-width: 550px) {
+  #p_fee .fee_content {
+    -moz-border-radius: 10% / 5%;
+    -webkit-border-radius: 10% 5%;
+    border-radius: 10% / 5%; }
+    #p_fee .fee_content .txt {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      color: white; }
+    #p_fee .fee_content table {
+      width: 100%; }
+      #p_fee .fee_content table tr th {
+        font-size: 1.6rem;
+        line-height: 1.8; } }
+/* chara
+------------------------------------------------------------------------------charaページここから------*/
+/* main_imag -----------------------------------------------------------*/
+#ch_main_img {
+  background: url(../images/service/chara_top.png) center center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  z-index: 30; }
+  #ch_main_img .main_title {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(67, 129, 204, 0.7);
+    -moz-border-radius: 360px 300px 280px 360px/300px 250px 450px 280px;
+    -webkit-border-radius: 360px;
+    border-radius: 360px 300px 280px 360px/300px 250px 450px 280px;
+    width: 500px;
+    height: 200px;
+    z-index: 40;
+    font-family: 'Mina', sans-serif; }
+    #ch_main_img .main_title p {
+      font-size: 60px;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding-top: 20px; }
+
+@media (max-width: 550px) {
+  #ch_main_img {
+    background: url(../images/service_sp/chara_top.png) center center; }
+    #ch_main_img .main_title {
+      width: 300px;
+      height: 150px;
+      z-index: 40; }
+      #ch_main_img .main_title p {
+        font-size: 45px;
+        padding-top: 15px; } }
+ /* mannga
+------------------------------------------------------------------------------manngaページここから------*/
+/* main_imag -----------------------------------------------------------*/
+#mg_main_img {
+  background: url(../images/service/mannga_top.png) center center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  z-index: 30; }
+  #mg_main_img .main_title {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(67, 129, 204, 0.7);
+    -moz-border-radius: 370px 250px 430px 350px/300px 560px 360px 230px;
+    -webkit-border-radius: 370px;
+    border-radius: 370px 250px 430px 350px/300px 560px 360px 230px;
+    width: 500px;
+    height: 150px;
+    z-index: 40;
+    font-family: 'Mina', sans-serif; }
+    #mg_main_img .main_title p {
+      font-size: 60px;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding-top: 40px; }
+
+@media (max-width: 550px) {
+  #mg_main_img {
+    background: url(../images/service_sp/mannga_top.png) center center; }
+    #mg_main_img .main_title {
+      width: 250px;
+      height: 100px;
+      z-index: 40; }
+      #mg_main_img .main_title p {
+        font-size: 45px;
+        padding-top: 25px; } }
+ /* web
+---------------------------------------------------------------------------------------------webページここから----*/
+/* main_imag -----------------------------------------------------------*/
+#web_main_img {
+  background: url(../images/service/web_top.png) center center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  z-index: 30; }
+  #web_main_img .main_title {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(67, 129, 204, 0.7);
+    -moz-border-radius: 400px 250px 500px 350px/360px 560px 450px 230px;
+    -webkit-border-radius: 400px;
+    border-radius: 400px 250px 500px 350px/360px 560px 450px 230px;
+    width: 500px;
+    height: 150px;
+    z-index: 40;
+    font-family: 'Mina', sans-serif; }
+    #web_main_img .main_title p {
+      font-size: 60px;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding-top: 40px; }
+
+@media (max-width: 550px) {
+  #web_main_img {
+    background: url(../images/service_sp/web_top.png) center center; }
+    #web_main_img .main_title {
+      width: 280px;
+      height: 100px;
+      z-index: 40; }
+      #web_main_img .main_title p {
+        font-size: 40px;
+        padding-top: 25px; } }
+ /* others
+---------------------------------------------------------------------------------------------othersページここから----*/
+/* main_imag -----------------------------------------------------------*/
+#oth_main_img {
+  background: url(../images/service/others_top.png) center center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  z-index: 30; }
+  #oth_main_img .main_title {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(67, 129, 204, 0.7);
+    -moz-border-radius: 380px 250px 450px 300px/250px 380px 400px 230px;
+    -webkit-border-radius: 380px;
+    border-radius: 380px 250px 450px 300px/250px 380px 400px 230px;
+    width: 500px;
+    height: 150px;
+    z-index: 40;
+    font-family: 'Mina', sans-serif; }
+    #oth_main_img .main_title p {
+      font-size: 60px;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding-top: 40px; }
+
+@media (max-width: 550px) {
+  #oth_main_img {
+    background: url(../images/service_sp/others_top.png) center center; }
+    #oth_main_img .main_title {
+      width: 280px;
+      height: 100px;
+      z-index: 40; }
+      #oth_main_img .main_title p {
+        font-size: 40px;
+        padding-top: 25px; } }
 /* works
 -----------------------------------------------------------------------------worksここから---------*/
 /* main_img -----------------------------------------------------------*/
@@ -1099,6 +1698,14 @@ footer {
   #container .mix {
     display: none; }
 
+@media (max-width: 960px) {
+  .bg_controls {
+    margin-bottom: 10px; }
+
+  #container {
+    width: 700px; }
+    #container img {
+      width: 229px; } }
 @media (max-width: 550px) {
   .bg_controls {
     margin-bottom: 10px; }

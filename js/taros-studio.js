@@ -26,6 +26,12 @@ $(document).ready(function(){
             },
             1000:{
                 items:5
+            },
+            1440:{
+                items:8
+            },
+            1500:{
+                items:10
             }
         }
 });
@@ -39,7 +45,7 @@ $(document).ready(function(){
       var hash = this.hash;
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 1000, function(){
+      }, 500, function(){
         window.location.hash = hash;
       });
     }

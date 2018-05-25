@@ -73,9 +73,9 @@ li{
     @include display-flex;
     @include flex-direction(row);
     z-index: 10;
-    width: 960px;
+    width: auto;
     margin: auto;
-    padding: 10px; 
+    padding: 10px 30px; 
     
     .head_logo{
         @include flex(1);
@@ -87,67 +87,14 @@ li{
     }//head_logo
     
     .navi{
-        padding-right: 0px;
-        .sp_navi{
-            display: none;
-        }//sp_navi
-        
-        .pc_navi{
-            padding-top: 20px;
-            ul{
-                margin: 0;
-                li{
-                    display: inline;
-                    
-                    a{
-                        color: $fontColor;
-                        font-size: 1.8rem;
-                        font-weight: bold;
-                        padding-left: 20px;
-                        
-                        &:hover{
-                            color: lighten($fontColor , 30%);
-                        }//hover
-                    }//a
-                }//li
-            }//ul
-        }//pc_navi
-    }//navi
-        
-        
-    
-}//#head_in
-
-@media(max-width: 550px){
-    #head_in{
-        max-width: 550px;
-        width: auto;
-        
-        .head_logo{
-            position: relative;
-            width: 50%;
-            padding: 0;
-            h1{
-                position: absolute;
-                img{
-                    width: 130px;
-                }//img
-            }//h1
-        }//head_logo
-        
-        .navi{
-            .pc_navi{
-               display: none; 
-            }//pc_navi
-            
             .sp_navi{
                 display: block;
                 #sp_navi_btn{
                     padding: 0;
                         .hamburger-box{
-                            top: 5px;
+                            top: 10px;
                                 .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
-                                height: 2px;
+                                height: 3px;
                                 background-color: $fontColor;
                                 }//::
                         }//hamburger-box
@@ -158,7 +105,7 @@ li{
                 }//#sp_navi_btn
                 
                 .sp_navi_li{
-                    width: 180px;
+                    width: 250px;
                     position: absolute;
                     top: 46px;
                     right: 0;
@@ -178,16 +125,40 @@ li{
                             display: block;
                             padding: 10px 8px;
                             border-bottom: 1px solid $fontColor;
-                            font-size: 14px;
+                            font-size: 18px;
                             color: $fontColor;
                             text-decoration: none;
                         }//a
                     }//li
+                    
+                    .sublist{
+                        text-align: right;
+                        font-size: 14px;
+                    }//sublist
                 }//sp_navi_li
+            }//sp_navi
+        }//navi   
+}//#head_in
+
+@media(max-width: 550px){
+    #head_in{
+        padding: 10px;
+        
+        .head_logo{
+            padding-left: 0;
+        }//head_logo
+        
+        .navi{
+            .sp_navi{
+                #sp_navi_btn{
+                    padding: 0 5px 0 0;
+                }//#sp_navi_btn
             }//sp_navi
         }//navi
     }//#head_in
-}//max-width550
+}//550
+
+
 
 
  /* main_img--------------------------------------------------------------------TOPページここから----------*/
@@ -288,7 +259,7 @@ li{
     }//plofile_bg
     
     .plofile_container{
-        width: 800px;
+        width: 1000px;
         position: absolute;
         top: -20px;
         left: 0;
@@ -301,9 +272,10 @@ li{
             margin: 0;
             font-size: 45px;
             color: $fontColor;
-            width: 800px;
+            width: 1000px;
             text-align: center;
-            left: 5px;
+            left: -90px;
+            top: -5px;
         }//h1
         
         .pc_plofile_img{
@@ -313,10 +285,11 @@ li{
         .plofile_text{
            position: absolute;
            font-family: $baseFontFamily;
-           font-size: 1.4rem;
-           padding: 20px 30px;
+           font-size: 1.5rem;
+           line-height: 1.6;
+           padding: 30px 60px;
            background: white;
-           width: 500px;
+           width: 670px;
            top: 50px;
            right: 0;
            
@@ -327,8 +300,27 @@ li{
     }//plofile_container
  }//#plofile
  
+ @media(max-width: 960px){
+     #plofile{
+        .plofile_container{
+            width: 700px;
+            
+            h1{
+              width: 700px;
+              left: 60px;
+            }//h1
+            
+            .plofile_text{
+               padding: 20px 30px;
+               width: 430px;
+            }//plofile_text
+        }//plofile_container
+     }//#plofile
+ }//960
+ 
  @media(max-width: 550px){
      #plofile{
+         height: 550px;
         .plofile_bg{
             margin-top: 80px;
             margin-left: 15%;
@@ -352,14 +344,23 @@ li{
             }//pc_plofile_img
             
             .plofile_text{
-                box-sizing: border-box;
-               font-size: 1.2rem;
+               box-sizing: border-box;
+               font-size: 1.4rem;
+               line-height: 1.8;
                padding: 20px 20px;
                width: 70%;
             }//plofile_text
         }//plofile_container
      }//#plofile
  }//max-width550
+ 
+  @media(max-width: 320px){
+     #plofile{
+         height: 600px;
+     }//#plofile
+ }//max-width320
+ 
+
  
  
  /* service ----------------------------------------------------------------------------------*/
@@ -372,7 +373,7 @@ li{
     .service_bg{
         background: $Yellow;
         @include opacity(0.7);
-        height: 300px;
+        height: 350px;
         margin-top: 130px;
         left: 0;
         bottom: 0;
@@ -386,7 +387,7 @@ li{
     }//service_bg
     
     .service_container{
-        width: 960px;
+        width: 1200px;
         position: absolute;
         top: -30px;
         left: 0;
@@ -413,10 +414,11 @@ li{
         .service_text{
            position: absolute;
            font-family: $baseFontFamily;
-           font-size: 1.4rem;
+           font-size: 1.5rem;
+           line-height: 1.8;
            padding: 20px 30px 60px 30px;
            background: white;
-           width: 540px;
+           width: 800px;
            top: 60px;
            left: 0;
            .more{
@@ -425,6 +427,7 @@ li{
                border: 1px solid $fontColor;
                text-align: center;
                line-height: 2.0;
+               margin-left: auto;
                &:hover{
                    background: $baseColor;
                }//hover
@@ -437,40 +440,169 @@ li{
         
         .service_contents{
             position: absolute;
-            top: 260px;
-            left: -40px;
+            top: 270px;
+            left: 60px;
             @include display-flex;
-            width: 1050px;
+            width: 1100px;
             justify-content: space-between;
             
             .content{
+                width: 170px;
                 position: relative;
                 img{
                     width: 170px;
                 }//img
-                p{
-                    position: absolute;
-                    font-size: 1.6rem;
-                    color: #fff;
-                    top: 55px;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    text-align: center;
-                }//p
-                .line{
-                    top: 65px;
-                }//line
+                a{
+                    display: block;
+                    span{
+                        position: absolute;
+                        font-size: 1.6rem;
+                        color: #fff;
+                        top: 55px;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                    }//span
+                    .line{
+                        top: 68px;
+                    }//line
+                }//a
             }//content
         }//service_contents
     }//service_container
  }//#service
  
-  @media(max-width: 550px){
+ @media(max-width: 1024px){
+     #service{
+        .service_container{
+            max-width: 1024px;
+            width: 100%;
+            
+            .service_text{
+               width: 700px;
+            }//service_text
+            
+            .service_contents{
+                 top: 270px;
+                width: 900px;
+                
+                .content{
+                    width: 140px;
+                    img{
+                        width: 140px;
+                    }//img
+                    a{
+                        span{
+                            font-size: 1.5rem;
+                            top: 45px;
+                        }//span
+                        .line{
+                            top: 60px;
+                        }//line
+                    }//a
+                }//content
+            }//service_contents
+        }//service_container
+     }//#service
+ }//1024
+ 
+ @media(max-width: 960px){
+     #service{
+        .service_container{
+            max-width: 960px;
+            width: 100%;
+            
+            .service_contents{
+                top: 270px;
+                width: 800px;
+                
+                .content{
+                    width: 130px;
+                    img{
+                        width: 130px;
+                    }//img
+                    a{
+                        span{
+                            font-size: 1.4rem;
+                            top: 45px;
+                        }//span
+                        .line{
+                            top: 60px;
+                        }//line
+                    }//a
+                }//content
+            }//service_contents
+        }//service_container
+     }//#service
+ }//960
+ 
+   @media(max-width: 768px){
+      #service{
+        .service_bg{
+            height: 370px;
+            margin-top: 80px;
+            margin-right: 30px;
+        }//service_bg
+    
+        .service_container{
+            max-width: 768px;
+            width: 100%;
+            
+            h1{
+                font-size: 40px;
+                width: 100%;
+                text-align: left;
+                left: 130px;
+            }//h1
+
+            .service_text{
+               box-sizing: border-box;
+               font-size: 1.5rem;
+               padding: 20px 20px 60px 20px;
+               width: 70%;
+               top: 50px;
+            }//service_text
+            
+            .service_contents{
+                top: 280px;
+                left: 0;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                .content{
+                    margin: 5px;
+                    width: 200px;
+                    img{
+                        width: 200px;
+                        height: 80px;
+                        object-fit: cover;
+                        padding-top: 10px;
+                        padding: 0;
+                    }//img
+                    
+                    a{
+                        span{
+                            font-size: 1.5rem;
+                            top: 20px;
+                        }//span
+                        .line{
+                            top: 30px;
+                        }//line
+                    }//a
+
+                }//content
+            }//service_contents
+        }//service_container
+     }//#service
+  }//768
+ 
+ 
+@media(max-width: 550px){
       #service{
         .service_bg{
             height: 450px;
-            margin-top: 80px;
+          //  margin-top: 80px;
             margin-right: 0;
         }//service_bg
     
@@ -494,19 +626,20 @@ li{
             
             .service_text{
                box-sizing: border-box;
-               font-size: 1.2rem;
+               font-size: 1.4rem;
                padding: 20px 20px 60px 20px;
                width: 70%;
                top: 50px;
                .more{
                    &:hover{
+                       margin-left: 0;
                        background: none;
                    }//hover
                }//more
             }//service_text
             
             .service_contents{
-                top: 320px;
+                top: 380px;
                 left: 0;
                 width: 100%;
                 justify-content: center;
@@ -514,23 +647,71 @@ li{
                 .content{
                     margin: 0 3px;
                     img{
-                        width: 150px;
+                        width: 200px;
                         height: 60px;
                         object-fit: cover;
                         padding-top: 10px;
                         padding: 0;
                     }//img
-                    p{
-                        top: -7px;
-                    }//p
-                    .line{
-                        top: 2px;
-                    }//line
+                    a{
+                        span{
+                            font-size: 1.5rem;
+                            top: 10px;
+                        }//span
+                        .line{
+                            top: 20px;
+                        }//line
+                    }//a
                 }//content
             }//service_contents
         }//service_container
      }//#service
   }//max-width
+  
+@media(max-width: 375px){
+      #service{
+        .service_bg{
+            height: 450px;
+        }//service_bg
+    
+        .service_container{
+            max-width: 375px;
+            
+            .service_text{
+               width: 80%;
+               .more{
+                   margin-left: 0;
+               }//more
+            }//service_text
+            
+            .service_contents{
+                .content{
+                    width: 150px;
+                    img{
+                        width: 150px;
+                    }//img
+                }//content
+            }//service_contents
+        }//service_container
+     }//#service
+  }//375
+  
+@media(max-width: 320px){
+      #service{
+        height: 600px;
+        .service_bg{
+            height: 450px;
+        }//service_bg
+    
+        .service_container{
+            max-width: 320px;
+            
+            .service_contents{
+                top: 430px;
+            }//service_contents
+        }//service_container
+     }//#service
+  }//375
  
  
  
@@ -538,7 +719,7 @@ li{
  
  
  #works{
-     width: 960px;
+     width: 1500px;
      margin-left: auto;
      margin-right: auto;
      margin-bottom: 50px;
@@ -564,9 +745,14 @@ li{
         }//a
 
     }//more
-    
-    
  }//#works
+ 
+ @media(max-width: 1440px){
+     #works{
+         max-width: 1440px;
+         width: 100%;
+     }//#works
+ }//1440
  
  @media(max-width: 550px){
      #works{
@@ -741,9 +927,9 @@ li{
              display: inline;
              margin: auto;
              font-family: 'Mina', sans-serif;
-             padding-left: 10px;
-             padding-right: 10px;
-             font-size: 2.0rem;
+             padding-left: 15px;
+             padding-right: 15px;
+             font-size: 2.5rem;
              font-weight: bold;
              a{
                 color: $Orange;
@@ -755,19 +941,30 @@ li{
      }//ul
  }//inner_link
  
- @media(max-width: 550px){
+ @media(max-width: 1024px){
       #inner_link{
-     //background: #7d7d7d;
      ul{
          padding: 10px;
          li{
-             font-size: 1.8rem;
-             line-height: 2.0;
+             font-size: 2.0rem;
+             line-height: 2.5;
              a{
                 &:hover{
                     color: $Orange;
                 }//hover
              }//a
+         }//li
+     }//ul
+ }//inner_link
+ }//1024
+ 
+ @media(max-width: 550px){
+      #inner_link{
+     ul{
+         padding: 10px;
+         li{
+             font-size: 1.8rem;
+             line-height: 2.0;
          }//li
      }//ul
  }//inner_link
@@ -789,14 +986,17 @@ li{
             margin-left: 35%;
             @media(max-width: 1440px){
                 margin-left: 25%;
-            }//max-width960
+            }//1440
             @media(max-width: 1200px){
                 margin-left: 20%;
-            }//max-width960
+            }//1200
+            @media(max-width: 1024px){
+                margin-left: 10%;
+            }//1024
         }//srbox1_bg
     
         .srbox1_container{
-            width: 960px;
+            width: 1200px;
             position: absolute;
             top: -20px;
             left: 0;
@@ -812,7 +1012,7 @@ li{
                 color: $fontColor;
                 width: 960px;
                 text-align: center;
-                right: 20px;
+                left: -25px;
                 top: -10px;
             }//srbox1_title
             
@@ -833,7 +1033,7 @@ li{
                position: absolute;
                padding: 20px 0 0 30px;
                background: white;
-               width: 650px;
+               width: 900px;
                top: 50px;
                right: 0;
                font-family: $baseFontFamily;
@@ -857,14 +1057,13 @@ li{
                }//ul
                
                .srbox1_btn{
-                   display: inline-flex;
                    float: right;
                    .btn{
-                        font-size: 1.6rem;
-                        width: 200px;
+                        font-size: 2.0rem;
+                        width: 300px;
                         border: 1px solid $fontColor;
                         text-align: center;
-                        line-height: 2.0;
+                        line-height: 2.5;
                         margin-left: auto;
                         &:hover{
                             background: $baseColor;
@@ -894,14 +1093,17 @@ li{
             margin-right: 35%;
             @media(max-width: 1440px){
                 margin-right: 25%;
-            }//max-width960
+            }//1440
             @media(max-width: 1200px){
                 margin-right: 20%;
-            }//max-width960
+            }//1200
+            @media(max-width: 1024px){
+                margin-right: 10%;
+            }//1024
         }//srbox1_bg
     
         .srbox2_container{
-            width: 960px;
+            width: 1200px;
             position: absolute;
             top: -20px;
             left: 0;
@@ -935,7 +1137,7 @@ li{
                position: absolute;
                padding: 20px 30px 0 0;
                background: white;
-               width: 650px;
+               width: 900px;
                top: 50px;
                letter-spacing: 0;
                font-family: $baseFontFamily;
@@ -961,14 +1163,13 @@ li{
                }//ul
                
                .srbox2_btn{
-                   display: inline-flex;
                    float: left;
                    .btn{
-                        font-size: 1.6rem;
-                        width: 200px;
+                        font-size: 2.0rem;
+                        width: 300px;
                         border: 1px solid $fontColor;
                         text-align: center;
-                        line-height: 2.0;
+                        line-height: 2.5;
                         margin-left: auto;
                         &:hover{
                             background: $baseColor;
@@ -984,13 +1185,81 @@ li{
     }//srbox2
 }//#sr_container
 
+@media(max-width: 1024px){
+    #sr_container{
+        max-width: 1024px;
+        width: 100%;
+         /* ここからbox1 --------------------------*/
+        .srbox1{
+            height: 500px;
+            .srbox1_container{
+                 width: 100%;
+                 
+                .srbox1_title{
+                    width: 100%;
+                     left: -40px;
+                }//srbox1_title
+                
+                 .chara{
+                     left: 60px;
+                 }//chara
+                
+                 .web{
+                     left: 25px;
+                 }//web
+                
+                .srbox1_text{
+                   width: 80%;
+                   h2{
+                       font-family: $baseFontFamily;
+                       font-size: 2.0rem;
+                       color: $fontColor;
+                   }//h2
+                   .sr_discr{
+                       margin-bottom: 0;
+                       margin-right: 30px;
+                   }//sr_discr
+                   p{
+                       margin-bottom: 0;
+                   }//p
+                   ul{
+                       margin: 0 0 0 20px;
+                       padding: 0;
+                   }//ul
+                }//srbox1_text
+            }//srbox1_container
+        }//srbox1
+        
+        /* ここからbox2 ------------------------------------*/
+        .srbox2{
+        
+            .srbox2_container{
+                width: 100%;
+                
+                .srbox2_title{
+                    width: 100%;
+                    right: 80px;
+                }//srbox1_title
+                
+                 .mannga{
+                     right: -18px;
+                 }//mannga
+                
+                .srbox2_text{
+                   width: 80%;
+                }//srbox2_text
+            }//srbox2_container
+        }//srbox2
+    }//#sr_container    
+}//1024
+
 @media(max-width: 550px){
     #sr_container{
         max-width: 550px;
         width: 100%;
      /* ここからbox1 ----------------------------------------*/
     .srbox1{
-        height: 600px;
+        height: 800px;
         margin-bottom: 100px;
         .srbox1_bg{
             margin-top: 100px;
@@ -1027,7 +1296,6 @@ li{
             .srbox1_text{
                padding: 10px 0 0 0;
                width: 85%;
-               font-size: 1.3rem;
                line-height: 1.8;
                h2{
                    font-size: 1.6rem;
@@ -1048,7 +1316,7 @@ li{
                .srbox1_btn{
                    width: 100%;
                    .btn{
-                        flex: 1;
+                        width: 100%;
                         &:hover{
                             background: white;
                         }//hover
@@ -1060,7 +1328,7 @@ li{
     
     /* ここからbox2 ------------------------------------------*/
     .srbox2{
-        height: 600px;
+        height: 800px;
         margin-bottom: 100px;
         .srbox2_bg{
            margin-top: 50px;
@@ -1085,7 +1353,6 @@ li{
             .srbox2_text{
                padding: 10px 0 0 0;
                width: 85%;
-               font-size: 1.3rem;
                line-height: 1.8;
                h2{
                    font-size: 1.6rem;
@@ -1105,7 +1372,7 @@ li{
                .srbox2_btn{
                    width: 100%;
                    .btn{
-                       flex: 1;
+                       width: 100%;
                         &:hover{
                             background: white;
                         }//hover
@@ -1131,13 +1398,12 @@ li{
 
 
 
-
-/* flow
--------------------------------------------------------------------------------flowページここから----*/
+/* movie
+---------------------------------------------------------------------------------------------movieページここから----*/
 
 /* main_imag -----------------------------------------------------------*/
-#fl_main_img{
-     background: url(../images/flow/flow.png) center center;
+#mo_main_img{
+     background: url(../images/service/movie_top.png) center center;
      background-size: cover;
      padding-top: 70px;
      padding-bottom: 70px;
@@ -1151,6 +1417,7 @@ li{
          width: 500px;
          height: 150px;
          z-index: 40;
+         font-family: 'Mina', sans-serif;
              
         p{
             font-size: 60px;
@@ -1164,8 +1431,8 @@ li{
  
  
  @media(max-width: 550px){
-     #fl_main_img{
-         background: url(../images/flow_sp/flow.png) center center;
+     #mo_main_img{
+         background: url(../images/service_sp/movie_top.png) center center;
     
          .main_title{
              width: 250px;
@@ -1177,279 +1444,900 @@ li{
                 padding-top: 25px;
             }//p
         }//main_title
-     }//#fl_main_img
+     }//#mo_main_img
  }//max-width550
  
- /* content ----------------------------------------------------------------*/
- 
- #fl_container{
+ /* ページ内リンク---------------------------------------------------*/
+ #s_inlink{
      width: 960px;
      margin: auto;
-     /* ここからbox1 ---------------------------*/
-    .flbox1{
+     text-align: center;
+     padding: 20px 0;
+    .pc_inlink{
         padding: 0;
-        position: relative;
-        height: 400px;
-        margin-bottom: 60px;
-        .flbox1_bg{
-            background: $Orange;
-            @include opacity(0.7);
-            height: 280px;
-            width: 850px;
-            margin-top: 130px;
-            bottom: 0;
-            margin-left: 50px;
-        }//flbox1_bg
-    
-        .flbox1_container{
-            width: 960px;
-            position: absolute;
-            top: -20px;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            margin: auto;
-            
-            .flbox1_title{
-                position: absolute;
-                margin: 0;
-                font-family: $baseFontFamily;
-                font-size: 45px;
+        li{
+            display: inline;
+            padding: 10px 40px;
+            font-size: 2.0rem;
+            line-height: 2.5rem;
+            border-right: 1px solid $fontColor;
+            &:last-child{
+                border: none;
+            }//last
+            a{
                 color: $fontColor;
-                width: 960px;
-                text-align: center;
-                font-weight: lighter;
-                left: 25px;
-                top: -10px;
-            }//flbox1_title
-            
-            .flbox1_img{
-                width: 380px;
-            }//flbox1_img
-            
-            .flbox1_text{
-               @include display-flex;
-               justify-content: space-between;
-               box-sizing: border-box;
-               position: absolute;
-               background: white;
-               width: 800px;
-               padding: 20px;
-               top: 50px;
-               right: 0;
-               .step{
-                   width: 100px;
-                   margin-right: 10px;
-                   &:last-child{margin-right: 0;}
-                   h3{
-                       text-align: center;
-                   }//h3
-               }//step
-               
-               .next_pc{
-                   margin-top: 100px;
-                   margin-left: 10px;
-                   margin-right: 10px;
-               }//next_pc
-               .next_sp{
-                   display: none;
-               }//next_sp
-            }//flbox1_text
-        }//flbox1_container
-    }//flbox1
-    
-    /* box2ここから-----------------------------------*/
-    
-    .flbox2{
-        padding: 0;
-        position: relative;
-        height: 1200px;
-        margin-bottom: 100px;
-        position: relative;
-        
-        .flbox2_bg{
-            position: absolute;
-            @include opacity(0.7);
-        }//flbox2_bg
-
-        .flbox2_title{
-            position:absolute;
-            margin: 0;
-            font-family: $baseFontFamily;
-            font-size: 45px;
-            color: $fontColor;
-            width: 960px;
-            text-align: left;
-            font-weight: lighter;
-            left: 25px;
-            top: -40px;
-        }//flbox_title
-        
-        .comment{
-            position: absolute;
-            font-size: 1.8rem;
-            margin-left: 25px;
-        }//comment
-        
-        .tkcho_box{
-            position: absolute;
-            width: 900px;
-            left: 20px;
-            right: 0;
-            top: 70px;
-            .tkcho{
-                background: white;
-                margin-bottom: 20px;
-                font-family: $baseFontFamily;
-                padding: 10px;
-                h4{
-                    font-size: 2.0rem;
-                    width: 900px;
-                    text-align: center;
-                    margin-top: 0;
-                    margin-bottom: 20px;
-                }//h4
-                p{
-                    font-size: 1.4rem;
-                    line-height: 1.8;
-                    span{
-                        color: $Blue;
-                        font-weight: bold;
-                    }//span
-                }//p
-            }//tkcho
-        }//tkcho_box
+            }//a
+        }//li
+    }//pc_inlink
+    .sp_inlink{
+        display: none;
+    }//sp_inlink
+ }//s_inlink
  
-    }//flbox2
-}//#fl_container
+ @media(max-width: 768px){
+     #s_inlink{
+     max-width: 700px;
+     width: 100%;
+    .pc_inlink{
+        li{
+            padding: 10px 20px;
+            font-size: 2.0rem;
+        }//li
+    }//pc_inlink
+ }//s_inlink
+ }//768
+ 
+ @media(max-width: 550px){
+     #s_inlink{
+     width: 100%;
+     .pc_inlink{
+         display: none;
+     }//pc_inlink
+    .sp_inlink{
+        display: block;
+        @include display-flex;
+        padding: 0;
+        li{
+            @include flex(1);
+            padding: 10px 10px;
+            font-size: 2.0rem;
+            line-height: 2.5rem;
+            a{
+                color: $fontColor;
+            }//a
+        }//li
+        .line{
+            border-right: 1px solid $fontColor;
+            border-bottom: 1px solid $fontColor;
+        }//line
+        .line_child{
+            border-bottom: 1px solid $fontColor;
+        }//line_child
+    }//.sp_inlink
+ }//s_inlink
+ }//550
+ 
+ 
+ /* 制作の特徴 --------------------------------------------------------*/
+ #s_content{
+     @include display-flex;
+     width: 1200px;
+     margin: auto;
+     padding-top: 30px;
+     padding-bottom: 30px;
+     .menu{
+         width: 60%;
+         background: rgba(255, 255, 255, 0.7);
+         padding: 20px 30px;
+         margin: 5px;
+         font-size: 1.5rem;
+         line-height: 1.8;
+         p{
+             margin: 0;
+         }//p
+     }//menu
 
+     .for{
+         width: 40%;
+         padding: 20px;
+         margin: 5px;
+         background: rgba(255, 255, 255, 0.7);
+         p{
+             font-size: 2.5rem;
+             color: $Orange;
+             border-bottom: 2px solid $Orange;
+             text-align: center;
+             margin: 0;
+         }//p
+         .for_list{
+             width: 85%;
+             margin: auto;
+             padding-top: 10px;
+             .for_li{
+                 @include display-flex;
+                 .txt{
+                     color: $Orange;
+                     font-size: 2.0rem;
+                     line-height: 1.2;
+                     padding: 10px 0;
+                 }//txt
+             }//for_li
+         }//for_list
+     }//for
+          
+     .menu_chara{
+         width: 40%;
+     }//menu_chara
+     .for_chara{
+         width: 60%;
+         .for_ul{
+             padding: 0;
+         }//for_ul
+     }//for_chara
+ }//#s_content
+ 
+ @media(max-width: 1024px){
+     #s_content{
+         width: 95%;
+         .menu{
+             width: 50%;
+         }//menu
+         
+         .for{
+             width: 50%;
+             padding: 20px 5px;
+         }//for
+     }//#s_content
+ }//1024
+ 
+ @media(max-width: 550px){
+     #s_content{
+         @include flex-direction(column);
+         width: 90%;
+         .menu{
+             box-sizing: border-box;
+             margin: 5px;
+             width: 100%;
+             font-size: 1.5rem;
+             line-height: 1.6;
+         }//menu
+         
+         .for{
+             box-sizing: border-box;
+             margin: 5px;
+             width: 100%;
+             p{
+             font-size: 2.0rem;
+             line-height: 1.8;
+             }//p
+             .for_list{
+                 width: 90%;
+                 .for_li{
+                     .txt{
+                         color: $Orange;
+                         font-size: 1.6rem;
+                         line-height: 1.2;
+                     }//txt
+                 }//for_li
+             }//for_list
+         }//for
+     }//#s_content
+ }//550
+ 
+ /* 制作の流れ　----------------------------------------------------------*/
+
+ #sr_flow{
+     background: rgba(255, 226, 85, 0.7);
+     padding-top: 30px;
+     padding-bottom: 30px;
+     h1{
+         color: $fontColor;
+         font-weight: lighter;
+         font-size: 3.5rem;
+         padding-bottom: 20px;
+         text-align: center;
+     }//h1
+     
+     .flbox1{
+         display: flex;
+         justify-content: space-between;
+         width: 1300px;
+         margin: auto;
+         .step{
+             box-sizing: border-box;
+             width: 200px;
+             height: auto;
+             background: white;
+             @include border-radius(5%);
+             text-align: center;
+             img{
+                 margin: 10px;
+             }//img
+             p{
+                 padding-left: 15px;
+                 padding-right: 15px;
+                 font-size: 1.2rem;
+                 line-height: 1.4;
+                 text-align: left;
+             }//p
+         }//step
+         .next_pc{
+            padding-top: 100px;
+         }//next_pc
+         .next_sp{
+             display: none;
+         }//next_sp
+     }//flbox1
+     
+     .flbox2{
+         width: 960px;
+         margin: auto;
+         padding: 20px;
+         p{
+             font-size: 1.5rem;
+             line-height: 1.8;
+             span{
+                 color: $Blue;
+             }//span
+         }//p
+     }//flbox2
+ }//#sr_flow
+ 
+ @media(max-width: 1024px){
+     #sr_flow{
+         .flbox1{
+            max-width: 1024px;
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+             .step{
+                 padding-left: 5px;
+                 padding-right: 5px;
+             }//step
+             .next_pc{
+                padding: 100px 5px 0 5px;
+             }//next_pc
+         }//flbox1
+         
+         .flbox2{
+             width: 80%;
+         }//flbox2
+     }//#sr_flow
+ }//1024
 
 @media(max-width: 550px){
-   #fl_container{
-     max-width: 550px;
-     width: 100%;
-     //margin: auto;
-         /* ここからbox1 -------------------------------*/
-        .flbox1{
-            height: 800px;
-            margin-bottom: 0;
-            .flbox1_bg{
-                height: 600px;
-                width: 90%;
-                margin-top: 80px;
-                margin-left: 5%;
-            }//flbox1_bg
-        
-            .flbox1_container{
-                max-width: 550px;
-                width: 100%;
-                
-                .flbox1_title{
-                    font-size: 30px;
-                    max-width: 550px;
-                    width: 100%;
-                    left: 0;
-                    top: -40px;
-                }//flbox1_title
-                
-                .flbox1_img{
-                    width: 200px;
-                }//flbox1_img
-                
-                .flbox1_text{
-                   @include flex-direction(column);
-                   width: 85%;
-                   padding: 10px;
-                   top: 40px;
-                   img{
-                       width: 60px;
-                       margin-top: 15px;
-                   }//img
-                   .step{
-                       @include display-flex;
-                       width: 100%;
-                       margin-left: 5px;
-                       margin-right: 5px;
-                       h3{
-                           text-align: left;
-                       }//h3
-                   }//step
-                   
-                   .text{
-                       margin-left: 10px;
-                       margin-right: 10px;
-                   }//text
-                   
-                   .next_pc{
-                       display: none;
-                   }//next_pc
-                   
-                   .next_sp{
-                       display: block;
-                       text-align: center;
-                       img{
-                           width: auto;
-                           height: 20px;
-                           margin: 5px;
-                       }//img
-                   }//next_sp
-                }//flbox1_text
-            }//flbox1_container
-        }//flbox1
-        
-        /* box2ここから--------------------------------------*/
-        
-        .flbox2{
-            height: 2100px;
-            margin-bottom: 100px;
-            
-            .flbox2_bg{
-                img{
-                max-width: 550px;
-                width: 100%;
-                height: 558px;
-                }//img
-            }//flbox2_bg
+    #sr_flow{
+     
+     .flbox1{
+         @include flex-direction(column);
+         .step{
+             @include display-flex;
+             width: 100%;
+             h3{
+                 text-align: left;
+                 padding-left: 15px;
+             }//h3
+             p{
+                 font-size: 1.3rem;
+                 line-height: 1.4;
+             }//p
+         }//step
+          .next_pc{
+             display: none;
+          }//next_pc
+          .next_sp{
+              display: block;
+              width: 100%;
+              text-align: center;
+              padding: 5px 0;
+          }//next_sp
+      }//flbox1
+ }//#sr_flow
+}//550
+ 
+ 
+ 
+ 
+ /* 制作料金 ----------------------------------------------------------------*/
+ 
+ #s_fee{
+     padding-top: 30px;
+     padding-bottom: 30px;
+     h1{
+         color: $fontColor;
+         font-weight: lighter;
+         font-size: 3.5rem;
+         padding-bottom: 20px;
+         text-align: center;
+     }//h1
+     
+     .fee_content{
+         @include display-flex;
+         justify-content: space-between;
+         width: 1200px;
+         margin: auto;
+         .fee_box{
+             box-sizing: border-box;
+             width: 450px;
+             margin: 0 10px;
+             background: rgba(128, 171, 220, 0.8);
+             @include border-radius(10%, 5%);
+             padding: 10px;
+             h5{
+                 text-align: center;
+                 font-size: 2.5rem;
+                 color: white;
+                 margin: 32px 0 0 0;
+                 border-bottom: 1px solid white;
+             }//h5
+             
+             .topfee{
+                 text-align: center;
+                 font-size: 2.5rem;
+                 color: white;
+                 margin: 0;
+                 border-bottom: 1px solid white;
+                 span{
+                     font-size: 1.8rem;
+                     background: $Orange;
+                     padding: 5px;
+                     @include border-radius(5%);
+                     margin-left: 150px;
+                 }//span
+             }//topfee
+             
+             .fee{
+                 text-align: center;
+                 font-size: 4.0rem;
+                 color: white;
+                 span{
+                     font-size: 3.0rem;
+                 }//span
+             }//fee
+             
+             .txt{
+                 font-size: 1.5rem;
+                 line-height: 1.8;
+                 color: white;
+                 padding: 10px;
+                 margin: 10px 10px 0 10px;
+                 border-top: 1px solid white;
+             }//txt
+             
+             table{
+                 width: 90%;
+                 margin: 10px auto;
+                 border-collapse: collapse;
+                 border: 1px solid $Blue;
+                 background: rgba(255, 255, 255, 0.9);
+                 tr{
+                     border: 1px solid $Blue;
+                     th{
+                         border: 1px solid $Blue;
+                         font-size: 1.5rem;
+                         color: $Blue;
+                         font-weight: lighter;
+                         line-height: 1.0;
+                         padding: 10px 0;
+                     }//th
+                 }//tr
+             }//table
+         }//fee_box
+         
+         .fb_m{
+             @include flex(1);
+             @include border-radius(10%);
+             h5{
+                 margin: 20px 0 0 0;
+                 padding-bottom: 20px;
+             }//h5
+             .txt{
+                 border-top: none;
+             }//txt
+             .w_txt{
+                 border-top: 1px solid white;
+             }//w_txt
+             
+             table{
+                 margin-bottom: 20px;
+                 tr{
+                     th{
+                         font-size: 2.0rem;
+                         line-height: 1.2;
+                         padding: 10px 0;
+                     }//th
+                 }//tr
+             }//table
+         }//fb_m
+
+     }//fee_content
+     
+ 
+     
+     .oh_menu{
+         margin: 20px 0;
+         p{
+             width: 1200px;
+             font-size: 1.5rem;
+             line-height: 1.8;
+             margin: 10px auto;
+             padding: 0 10px;
+             background: #f2f2f2;
+             text-align: center;
+             a{
+                 font-family: 'Mina', sans-serif;
+                 font-size: 2.0rem;
+                 color: $Orange;
+                 padding: 0 10px;
+             }//a
+         }//p
+         .oh_plus{
+             width: 1000px;
+             margin: auto;
+             text-align: left;
+             font-size: 1.6rem;
+             color: $Blue;
+             //background: #f2f2f2;
+         }//oh_plus
+     }//oh_menu
+     
+ }//#s_fee
+ 
+ @media(max-width: 1024px){
+      #s_fee{
+         .fee_content{
+            @include flex-direction(column);
+             width: 90%;
+             .fee_box{
+                 width: 100%;
+                 margin: 10px auto;
+                 @include border-radius(5%, 10%);
+                 
+                  .topfee{
+                      span{
+                          margin-left: 0;
+                      }//span
+                  }//topfee
+             }//fee_box
+         }//fee_content
+         .oh_menu{
+             p{
+                 width: 90%;
+             }//p
+             .oh_plus{
+                 width: 90%;
+             }//oh_plus
+         }//oh_menu
+     }//#s_fee
+ }//1024
+ 
+ @media(max-width: 550px){
+      #s_fee{
+         .fee_content{
+             .fee_box{
+                 @include border-radius(10%, 5%);
+             }//fee_box
+             .fb_m{
+             @include border-radius(10%, 5%);
+             
+             table{
+                 width: 95%;
+                 tr{
+                     th{
+                         font-size: 1.6rem;
+                     }//th
+                 }//tr
+             }//table
+         }//fb_m
+         }//fee_content
+     }//#s_fee
+ }//550
+ 
+ 
+ /* 制作実績　----------------------------------------------------------*/
+
+ #s_work{
+     background: rgba(247, 198, 150, 0.7);
+     padding-top: 30px;
+     padding-bottom: 80px;
+     text-align: center;
+     h1{
+         color: $fontColor;
+         font-weight: lighter;
+         font-size: 3.5rem;
+         padding-bottom: 20px;
+         text-align: center;
+     }//h1
+     .works{
+          width: 80%;
+          margin: auto;
+         @include display-flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         img{
+             margin: 5px;
+             width: 300px;
+             height: 150px;
+             object-fit: cover;
+             object-position: 50% 50%;
+         }//img
+     }//works
+ }//s_work
+ 
+ @media(max-width: 1024px){
+     #s_work{
+         .works{
+              width: 90%;
+              img{
+                  width: 200px;
+              }//img
+         }//works
+     }//s_work
+ }//1024
+ 
+ @media(max-width: 550px){
+     #s_work{
+         .works{
+              width: 100%;
+              img{
+                  width: 150px;
+                  margin: 5px;
+              }//img
+         }//works
+     }//s_work
+ }//1024
+ 
+
+
+/* pamph
+------------------------------------------------------------------------------pamphページここから------*/
+
+#pm_main_img{
+     background: url(../images/service/pamph_top.png) center center;
+     background-size: cover;
+     padding-top: 70px;
+     padding-bottom: 70px;
+     z-index: 30;
+
+     .main_title{
+         margin-left: auto;
+         margin-right: auto;
+         background: rgba(67, 129, 204, 0.7);
+         @include border-radius(360px 300px 280px 360px / 300px 250px 450px 280px);
+         width: 500px;
+         height: 200px;
+         z-index: 40;
+         font-family: 'Mina', sans-serif;
+             
+        p{
+            font-size: 60px;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding-top: 20px;
+        }//p
+    }//main_title
+ }//#pm_main_img
+ 
+ 
+ @media(max-width: 550px){
+     #pm_main_img{
+         background: url(../images/service_sp/pamph_top.png) center center;
     
-            .flbox2_title{
-                font-size: 30px;
-                max-width: 550px;
-                width: 100%;
-                text-align: center;
-                left: 0;
-                top: -50px;
-            }//flbox_title
-            
-            .comment{
-                font-size: 1.3rem;
-                margin-left: 0;
-                p{
-                    width: 320px;
-                    text-align: center;
-                }//p
-            }//comment
-            
-            .tkcho_box{
-                width: 90%;
-                left: 5%;
-                top: 50px;
-                .tkcho{
-                    h4{
-                        font-size: 1.5rem;
-                        width: 100%;
-                        margin-top: 10px;
-                    }//h4
-                    p{
-                        font-size: 1.3rem;
-                        line-height: 1.8;
-                    }//p
-                }//tkcho
-            }//tkcho_box
-        }//flbox2
-    }//#fl_container 
-}//maxwidth550
+         .main_title{
+             width: 300px;
+             height: 150px;
+             z-index: 40;
+                 
+            p{
+                font-size: 45px;
+                padding-top: 15px;
+            }//p
+        }//main_title
+     }//#pm_main_img
+ }//max-width550
+ 
+/* 制作料金 ----------------------------------------------------------------*/
+ 
+#p_fee{
+     padding-top: 30px;
+     padding-bottom: 30px;
+     h1{
+         color: $fontColor;
+         font-weight: lighter;
+         font-size: 3.5rem;
+         padding-bottom: 20px;
+         text-align: center;
+     }//h1
+     
+     .fee_content{
+         width: 1200px;
+         margin: auto;
+         background: rgba(128, 171, 220, 0.8);
+         @include border-radius(5%, 10%);
+         padding: 10px;
+             
+             .txt{
+                 font-size: 1.6rem;
+                 line-height: 1.8;
+                 color: white;
+                 padding: 10px;
+                 margin: 10px 10px 0 10px;
+                 text-align: center;
+             }//txt
+             
+             table{
+                 width: 90%;
+                 margin: 20px auto;
+                 border-collapse: collapse;
+                 border: 1px solid $Blue;
+                 background: rgba(255, 255, 255, 0.9);
+                 tr{
+                     border: 1px solid $Blue;
+                     th{
+                         border: 1px solid $Blue;
+                         font-size: 2.0rem;
+                         color: $Blue;
+                         font-weight: lighter;
+                         line-height: 1.2;
+                         padding: 10px;
+                     }//th
+                 }//tr
+             }//table
+     }//fee_content
+     
+     .oh_menu{
+         width: 100%;
+         margin: auto;
+         text-align: center;
+         margin: 20px 0;
+         p{
+             font-size: 1.5rem;
+             line-height: 1.8;
+             a{
+                 font-family: 'Mina', sans-serif;
+                 font-size: 2.0rem;
+                 color: $Orange;
+                 padding: 0 10px;
+             }//a
+         }//p
+     }//oh_menu
+ }//#p_fee
+ 
+ @media(max-width: 1024px){
+      #p_fee{
+         .fee_content{
+             width: 90%;
+         }//fee_content
+     }//#p_fee
+ }//1024
+ 
+ @media(max-width: 550px){
+      #p_fee{
+         .fee_content{
+              @include border-radius(10%, 5%);
+                 
+                 .txt{
+                     font-size: 1.5rem;
+                     line-height: 1.6;
+                     color: white;
+                 }//txt
+                 
+                 table{
+                      width: 100%;
+                     tr{
+                         th{
+                             font-size: 1.6rem;
+                             line-height: 1.8;
+                         }//th
+                     }//tr
+                 }//table
+         }//fee_content
+     }//#p_fee
+ }//550
 
 
+/* chara
+------------------------------------------------------------------------------charaページここから------*/
+
+/* main_imag -----------------------------------------------------------*/
+#ch_main_img{
+     background: url(../images/service/chara_top.png) center center;
+     background-size: cover;
+     padding-top: 70px;
+     padding-bottom: 70px;
+     z-index: 30;
+
+     .main_title{
+         margin-left: auto;
+         margin-right: auto;
+         background: rgba(67, 129, 204, 0.7);
+         @include border-radius(360px 300px 280px 360px / 300px 250px 450px 280px);
+         width: 500px;
+         height: 200px;
+         z-index: 40;
+         font-family: 'Mina', sans-serif;
+             
+        p{
+            font-size: 60px;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding-top: 20px;
+        }//p
+    }//main_title
+ }//#ch_main_img
+ 
+ 
+ @media(max-width: 550px){
+     #ch_main_img{
+         background: url(../images/service_sp/chara_top.png) center center;
+    
+         .main_title{
+             width: 300px;
+             height: 150px;
+             z-index: 40;
+                 
+            p{
+                font-size: 45px;
+                padding-top: 15px;
+            }//p
+        }//main_title
+     }//#ch_main_img
+ }//max-width550
+ 
+ 
+ /* mannga
+------------------------------------------------------------------------------manngaページここから------*/
+
+/* main_imag -----------------------------------------------------------*/
+#mg_main_img{
+     background: url(../images/service/mannga_top.png) center center;
+     background-size: cover;
+     padding-top: 70px;
+     padding-bottom: 70px;
+     z-index: 30;
+
+     .main_title{
+         margin-left: auto;
+         margin-right: auto;
+         background: rgba(67, 129, 204, 0.7);
+         @include border-radius(370px 250px 430px 350px / 300px 560px 360px 230px);
+         width: 500px;
+         height: 150px;
+         z-index: 40;
+         font-family: 'Mina', sans-serif;
+             
+        p{
+            font-size: 60px;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding-top: 40px;
+        }//p
+    }//main_title
+ }//#mg_main_img
+ 
+ 
+ @media(max-width: 550px){
+     #mg_main_img{
+         background: url(../images/service_sp/mannga_top.png) center center;
+    
+         .main_title{
+             width: 250px;
+             height: 100px;
+             z-index: 40;
+                 
+            p{
+                font-size: 45px;
+                padding-top: 25px;
+            }//p
+        }//main_title
+     }//#mg_main_img
+ }//max-width550
+ 
+ 
+ /* web
+---------------------------------------------------------------------------------------------webページここから----*/
+
+/* main_imag -----------------------------------------------------------*/
+#web_main_img{
+     background: url(../images/service/web_top.png) center center;
+     background-size: cover;
+     padding-top: 70px;
+     padding-bottom: 70px;
+     z-index: 30;
+
+     .main_title{
+         margin-left: auto;
+         margin-right: auto;
+         background: rgba(67, 129, 204, 0.7);
+         @include border-radius(400px 250px 500px 350px / 360px 560px 450px 230px);
+         width: 500px;
+         height: 150px;
+         z-index: 40;
+         font-family: 'Mina', sans-serif;
+             
+        p{
+            font-size: 60px;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding-top: 40px;
+        }//p
+    }//main_title
+ }//#web_main_img
+ 
+ 
+ @media(max-width: 550px){
+     #web_main_img{
+         background: url(../images/service_sp/web_top.png) center center;
+    
+         .main_title{
+             width: 280px;
+             height: 100px;
+             z-index: 40;
+                 
+            p{
+                font-size: 40px;
+                padding-top: 25px;
+            }//p
+        }//main_title
+     }//#web_main_img
+ }//max-width550
+ 
+ 
+ /* others
+---------------------------------------------------------------------------------------------othersページここから----*/
+
+/* main_imag -----------------------------------------------------------*/
+#oth_main_img{
+     background: url(../images/service/others_top.png) center center;
+     background-size: cover;
+     padding-top: 70px;
+     padding-bottom: 70px;
+     z-index: 30;
+
+     .main_title{
+         margin-left: auto;
+         margin-right: auto;
+         background: rgba(67, 129, 204, 0.7);
+         @include border-radius(380px 250px 450px 300px / 250px 380px 400px 230px);
+         width: 500px;
+         height: 150px;
+         z-index: 40;
+         font-family: 'Mina', sans-serif;
+             
+        p{
+            font-size: 60px;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding-top: 40px;
+        }//p
+    }//main_title
+ }//#oth_main_img
+ 
+ 
+ @media(max-width: 550px){
+     #oth_main_img{
+         background: url(../images/service_sp/others_top.png) center center;
+    
+         .main_title{
+             width: 280px;
+             height: 100px;
+             z-index: 40;
+                 
+            p{
+                font-size: 40px;
+                padding-top: 25px;
+            }//p
+        }//main_title
+     }//#oth_main_img
+ }//max-width550
+ 
+ 
 
 /* works
 -----------------------------------------------------------------------------worksここから---------*/
@@ -1545,6 +2433,22 @@ li{
     	display: none;
     }//mix
 }//#container
+
+@media(max-width: 960px){
+    .bg_controls{
+    margin-bottom: 10px;
+    }//bg_controls
+    
+    .controls{
+    }//controls
+
+    #container{
+        width: 700px;
+        img{
+             width: 229px;
+        }//img
+    }//#container
+}//960
 
 @media(max-width: 550px){
     .bg_controls{
